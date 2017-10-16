@@ -2,9 +2,9 @@
 HXBaseViewController快速搭建界面的导航栏配置
 
 # 功能
- *高度定制化
- *使用简单
- *支持旋转，导航栏等配置。
+ * 高度定制化
+ * 使用简单
+ * 支持旋转，导航栏等配置。
  通过继承 HXBaseViewController 类，对带导航的界面进行定制，类中已做了初始化设置，
  ##最好是 继承 HXBaseViewController 配置样式，然后继承你自定义的类。
 
@@ -15,7 +15,7 @@ pod 'HXBaseViewController'
 ```
 
 # 效果
-！[](https://github.com/EarthMass/HXBaseViewController/blob/master/HXProgressGif.gif)
+![](https://github.com/EarthMass/HXBaseViewController/blob/master/HXProgressGif.gif)
 
 # 使用
 * 引入 头文件 
