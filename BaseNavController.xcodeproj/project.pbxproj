@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13756C931F9442F300BE46C3 /* TabBarVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756C921F9442F300BE46C3 /* TabBarVC1.m */; };
-		13756C961F94430300BE46C3 /* TabBarVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756C951F94430300BE46C3 /* TabBarVC2.m */; };
-		13756C991F94431100BE46C3 /* TabBarVC3.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756C981F94431100BE46C3 /* TabBarVC3.m */; };
-		13756C9C1F94432100BE46C3 /* TabBarVC4.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756C9B1F94432100BE46C3 /* TabBarVC4.m */; };
 		13756C9F1F944C8E00BE46C3 /* tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 13756C9E1F944ADD00BE46C3 /* tab.png */; };
 		13756CA01F944C9200BE46C3 /* barItemIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13756C9D1F9445FD00BE46C3 /* barItemIcon.png */; };
-		13756CA61F9480A900BE46C3 /* SamplePushVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CA51F9480A900BE46C3 /* SamplePushVC.m */; };
 		13756CB31F949AA400BE46C3 /* HXBaseViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 13756CAA1F949A6A00BE46C3 /* HXBaseViewController.bundle */; };
-		13756CB41F949AB400BE46C3 /* BaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CA91F949A6A00BE46C3 /* BaseNavgationController.m */; };
-		13756CB51F949AB400BE46C3 /* HXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CAC1F949A6A00BE46C3 /* HXBaseViewController.m */; };
-		13756CB61F949AB400BE46C3 /* HXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CAE1F949A6A00BE46C3 /* HXTabBarController.m */; };
-		13756CB71F949AB400BE46C3 /* NSString+GetImageFromBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CB01F949A6A00BE46C3 /* NSString+GetImageFromBundle.m */; };
-		13756CB81F949AB400BE46C3 /* UINavigationItem+margin.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CB21F949A6A00BE46C3 /* UINavigationItem+margin.m */; };
-		13756CC41F949C4500BE46C3 /* BaseNavVCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CBB1F949C4500BE46C3 /* BaseNavVCDemo.m */; };
-		13756CC51F949C4500BE46C3 /* OneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CBD1F949C4500BE46C3 /* OneVC.m */; };
-		13756CC61F949C4500BE46C3 /* TwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CBF1F949C4500BE46C3 /* TwoVC.m */; };
-		13756CC71F949C4500BE46C3 /* UIButton+InBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CC11F949C4500BE46C3 /* UIButton+InBlock.m */; };
-		13756CC81F949C4500BE46C3 /* WithoutBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CC31F949C4500BE46C3 /* WithoutBarVC.m */; };
+		13756CCA1F94A69400BE46C3 /* BaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CA91F949A6A00BE46C3 /* BaseNavgationController.m */; };
+		13756CCB1F94A69400BE46C3 /* HXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CAC1F949A6A00BE46C3 /* HXBaseViewController.m */; };
+		13756CCC1F94A69400BE46C3 /* HXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CAE1F949A6A00BE46C3 /* HXTabBarController.m */; };
+		13756CCD1F94A69400BE46C3 /* NSString+GetImageFromBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CB01F949A6A00BE46C3 /* NSString+GetImageFromBundle.m */; };
+		13756CCE1F94A69400BE46C3 /* UINavigationItem+margin.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CB21F949A6A00BE46C3 /* UINavigationItem+margin.m */; };
+		13756CCF1F94A69400BE46C3 /* BaseNavVCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CBB1F949C4500BE46C3 /* BaseNavVCDemo.m */; };
+		13756CD11F94A69400BE46C3 /* TwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CBF1F949C4500BE46C3 /* TwoVC.m */; };
+		13756CD31F94A69400BE46C3 /* WithoutBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CC31F949C4500BE46C3 /* WithoutBarVC.m */; };
+		13756CD41F94A69400BE46C3 /* TabBarVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756C921F9442F300BE46C3 /* TabBarVC1.m */; };
+		13756CD51F94A69400BE46C3 /* TabBarVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756C951F94430300BE46C3 /* TabBarVC2.m */; };
+		13756CD61F94A69400BE46C3 /* TabBarVC3.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756C981F94431100BE46C3 /* TabBarVC3.m */; };
+		13756CD71F94A69400BE46C3 /* TabBarVC4.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756C9B1F94432100BE46C3 /* TabBarVC4.m */; };
+		13756CD81F94A69400BE46C3 /* SamplePushVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CA51F9480A900BE46C3 /* SamplePushVC.m */; };
+		13756CD91F94A69400BE46C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EED5B681CF5ADA3004E59E3 /* AppDelegate.m */; };
+		13756CDA1F94A69400BE46C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EED5B651CF5ADA2004E59E3 /* main.m */; };
+		13756CDD1F94A6F900BE46C3 /* OneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CDB1F94A6F900BE46C3 /* OneVC.m */; };
+		13756CE01F94A72600BE46C3 /* UIButton+InBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CDF1F94A72600BE46C3 /* UIButton+InBlock.m */; };
 		3E714A541228D40A7E36F57C /* libPods-BaseNavController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AE80D793322AC49CF22D88 /* libPods-BaseNavController.a */; };
-		4EED5B661CF5ADA2004E59E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EED5B651CF5ADA2004E59E3 /* main.m */; };
-		4EED5B691CF5ADA3004E59E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EED5B681CF5ADA3004E59E3 /* AppDelegate.m */; };
 		4EED5B6F1CF5ADA3004E59E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EED5B6D1CF5ADA3004E59E3 /* Main.storyboard */; };
 		4EED5B711CF5ADA3004E59E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EED5B701CF5ADA3004E59E3 /* Assets.xcassets */; };
 		4EED5B741CF5ADA3004E59E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EED5B721CF5ADA3004E59E3 /* LaunchScreen.storyboard */; };
@@ -78,14 +78,14 @@
 		13756CB21F949A6A00BE46C3 /* UINavigationItem+margin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+margin.m"; sourceTree = "<group>"; };
 		13756CBA1F949C4500BE46C3 /* BaseNavVCDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavVCDemo.h; sourceTree = "<group>"; };
 		13756CBB1F949C4500BE46C3 /* BaseNavVCDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavVCDemo.m; sourceTree = "<group>"; };
-		13756CBC1F949C4500BE46C3 /* OneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneVC.h; sourceTree = "<group>"; };
-		13756CBD1F949C4500BE46C3 /* OneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneVC.m; sourceTree = "<group>"; };
 		13756CBE1F949C4500BE46C3 /* TwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoVC.h; sourceTree = "<group>"; };
 		13756CBF1F949C4500BE46C3 /* TwoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoVC.m; sourceTree = "<group>"; };
-		13756CC01F949C4500BE46C3 /* UIButton+InBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+InBlock.h"; sourceTree = "<group>"; };
-		13756CC11F949C4500BE46C3 /* UIButton+InBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+InBlock.m"; sourceTree = "<group>"; };
 		13756CC21F949C4500BE46C3 /* WithoutBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithoutBarVC.h; sourceTree = "<group>"; };
 		13756CC31F949C4500BE46C3 /* WithoutBarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithoutBarVC.m; sourceTree = "<group>"; };
+		13756CDB1F94A6F900BE46C3 /* OneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneVC.m; sourceTree = "<group>"; };
+		13756CDC1F94A6F900BE46C3 /* OneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneVC.h; sourceTree = "<group>"; };
+		13756CDE1F94A72600BE46C3 /* UIButton+InBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+InBlock.h"; sourceTree = "<group>"; };
+		13756CDF1F94A72600BE46C3 /* UIButton+InBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+InBlock.m"; sourceTree = "<group>"; };
 		14ED392BFE75E660798CA1A6 /* Pods-BaseNavController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseNavController.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseNavController/Pods-BaseNavController.release.xcconfig"; sourceTree = "<group>"; };
 		4EED5B611CF5ADA2004E59E3 /* BaseNavController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseNavController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EED5B651CF5ADA2004E59E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -180,14 +180,14 @@
 		13756CB91F949C4500BE46C3 /* Nav */ = {
 			isa = PBXGroup;
 			children = (
+				13756CDE1F94A72600BE46C3 /* UIButton+InBlock.h */,
+				13756CDF1F94A72600BE46C3 /* UIButton+InBlock.m */,
+				13756CDC1F94A6F900BE46C3 /* OneVC.h */,
+				13756CDB1F94A6F900BE46C3 /* OneVC.m */,
 				13756CBA1F949C4500BE46C3 /* BaseNavVCDemo.h */,
 				13756CBB1F949C4500BE46C3 /* BaseNavVCDemo.m */,
-				13756CBC1F949C4500BE46C3 /* OneVC.h */,
-				13756CBD1F949C4500BE46C3 /* OneVC.m */,
 				13756CBE1F949C4500BE46C3 /* TwoVC.h */,
 				13756CBF1F949C4500BE46C3 /* TwoVC.m */,
-				13756CC01F949C4500BE46C3 /* UIButton+InBlock.h */,
-				13756CC11F949C4500BE46C3 /* UIButton+InBlock.m */,
 				13756CC21F949C4500BE46C3 /* WithoutBarVC.h */,
 				13756CC31F949C4500BE46C3 /* WithoutBarVC.m */,
 			);
@@ -345,6 +345,7 @@
 				TargetAttributes = {
 					4EED5B601CF5ADA2004E59E3 = {
 						CreatedOnToolsVersion = 7.0;
+						ProvisioningStyle = Manual;
 					};
 					4EED5B791CF5ADA3004E59E3 = {
 						CreatedOnToolsVersion = 7.0;
@@ -462,23 +463,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13756CB41F949AB400BE46C3 /* BaseNavgationController.m in Sources */,
-				13756CC51F949C4500BE46C3 /* OneVC.m in Sources */,
-				13756CB51F949AB400BE46C3 /* HXBaseViewController.m in Sources */,
-				13756CC61F949C4500BE46C3 /* TwoVC.m in Sources */,
-				13756CB61F949AB400BE46C3 /* HXTabBarController.m in Sources */,
-				13756CB71F949AB400BE46C3 /* NSString+GetImageFromBundle.m in Sources */,
-				13756CC81F949C4500BE46C3 /* WithoutBarVC.m in Sources */,
-				13756CB81F949AB400BE46C3 /* UINavigationItem+margin.m in Sources */,
-				13756C9C1F94432100BE46C3 /* TabBarVC4.m in Sources */,
-				13756CC71F949C4500BE46C3 /* UIButton+InBlock.m in Sources */,
-				13756C961F94430300BE46C3 /* TabBarVC2.m in Sources */,
-				4EED5B691CF5ADA3004E59E3 /* AppDelegate.m in Sources */,
-				13756CC41F949C4500BE46C3 /* BaseNavVCDemo.m in Sources */,
-				13756CA61F9480A900BE46C3 /* SamplePushVC.m in Sources */,
-				13756C931F9442F300BE46C3 /* TabBarVC1.m in Sources */,
-				13756C991F94431100BE46C3 /* TabBarVC3.m in Sources */,
-				4EED5B661CF5ADA2004E59E3 /* main.m in Sources */,
+				13756CDD1F94A6F900BE46C3 /* OneVC.m in Sources */,
+				13756CCA1F94A69400BE46C3 /* BaseNavgationController.m in Sources */,
+				13756CCB1F94A69400BE46C3 /* HXBaseViewController.m in Sources */,
+				13756CCC1F94A69400BE46C3 /* HXTabBarController.m in Sources */,
+				13756CE01F94A72600BE46C3 /* UIButton+InBlock.m in Sources */,
+				13756CCD1F94A69400BE46C3 /* NSString+GetImageFromBundle.m in Sources */,
+				13756CCE1F94A69400BE46C3 /* UINavigationItem+margin.m in Sources */,
+				13756CCF1F94A69400BE46C3 /* BaseNavVCDemo.m in Sources */,
+				13756CD11F94A69400BE46C3 /* TwoVC.m in Sources */,
+				13756CD31F94A69400BE46C3 /* WithoutBarVC.m in Sources */,
+				13756CD41F94A69400BE46C3 /* TabBarVC1.m in Sources */,
+				13756CD51F94A69400BE46C3 /* TabBarVC2.m in Sources */,
+				13756CD61F94A69400BE46C3 /* TabBarVC3.m in Sources */,
+				13756CD71F94A69400BE46C3 /* TabBarVC4.m in Sources */,
+				13756CD81F94A69400BE46C3 /* SamplePushVC.m in Sources */,
+				13756CD91F94A69400BE46C3 /* AppDelegate.m in Sources */,
+				13756CDA1F94A69400BE46C3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,11 +621,15 @@
 			baseConfigurationReference = 92F34A6FC17EAC52320F075D /* Pods-BaseNavController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BaseNavController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guohx.StoryboardUse.BaseNavController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -633,11 +638,15 @@
 			baseConfigurationReference = 14ED392BFE75E660798CA1A6 /* Pods-BaseNavController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BaseNavController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guohx.StoryboardUse.BaseNavController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

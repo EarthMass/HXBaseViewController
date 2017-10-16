@@ -12,7 +12,6 @@
 #import <UINavigationController+FDFullscreenPopGesture.h>
 
 
-
 @interface HXBaseViewController () {
     UINavigationBar * navBar;
     BOOL isVcBaseApper; ///< 导航的设置优先级
