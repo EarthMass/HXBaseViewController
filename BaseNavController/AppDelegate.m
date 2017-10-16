@@ -8,6 +8,16 @@
 
 #import "AppDelegate.h"
 
+#import "BaseNavVCDemo.h" ///<自定义导航
+
+//tabBarController
+#import "TabBarVC1.h"
+#import "TabBarVC2.h"
+#import "TabBarVC3.h"
+#import "TabBarVC4.h"
+
+#import "HXTabBarController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,7 +27,41 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    //自定导航栏
+//    BaseNavVCDemo * navView =  [[BaseNavVCDemo alloc] init];
+//    UINavigationController * viewC = [[UINavigationController alloc] initWithRootViewController:navView];
+//    [self.window setRootViewController:viewC];
+    
+    self.nav = [self tabBarController];
+    [self.window setRootViewController:self.nav];
+    [self.window makeKeyAndVisible];
+    
     return YES;
+}
+
+- (UINavigationController *)tabBarController {
+    
+    
+    HXTabBarController * tabBarC = [[HXTabBarController alloc] init];
+    
+    TabBarVC1 * tabBarVC1 = [[TabBarVC1 alloc] init];
+    [tabBarVC1 setTabBarItemWithTitle:@"111" titleUnSelectStyle:nil titleSelectStyle:nil unselectImage:[UIImage imageNamed:@"tab.png"] selectImage:[UIImage imageNamed:@"barItemIcon"] imageSize:CGSizeMake(30, 30)];
+    
+    TabBarVC2 * tabBarVC2 = [[TabBarVC2 alloc] init];
+    [tabBarVC2 setTabBarItemWithTitle:@"222" titleUnSelectStyle:nil titleSelectStyle:nil unselectImage:[UIImage imageNamed:@"tab.png"] selectImage:[UIImage imageNamed:@"barItemIcon"] imageSize:CGSizeMake(30, 30)];
+    
+    TabBarVC3 * tabBarVC3 = [[TabBarVC3 alloc] init];
+    [tabBarVC3 setTabBarItemWithTitle:@"333" titleUnSelectStyle:nil titleSelectStyle:nil unselectImage:[UIImage imageNamed:@"tab.png"] selectImage:[UIImage imageNamed:@"barItemIcon"] imageSize:CGSizeMake(30, 30)];
+    
+    TabBarVC4 * tabBarVC4 = [[TabBarVC4 alloc] init];
+    [tabBarVC4 setTabBarItemWithTitle:@"444" titleUnSelectStyle:nil titleSelectStyle:nil unselectImage:[UIImage imageNamed:@"tab.png"] selectImage:[UIImage imageNamed:@"barItemIcon"] imageSize:CGSizeMake(30, 30)];
+    
+    tabBarC.viewControllers = @[[tabBarVC1 addNav],[tabBarVC2 addNav],[tabBarVC3 addNav],[tabBarVC4 addNav]];
+    
+    UINavigationController * rootNav = [[UINavigationController alloc ] initWithRootViewController:tabBarC];
+    [rootNav setNavigationBarHidden:YES];
+    return rootNav;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
