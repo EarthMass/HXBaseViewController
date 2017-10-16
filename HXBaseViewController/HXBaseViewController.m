@@ -9,7 +9,7 @@
 #import "HXBaseViewController.h"
 #import "NSString+GetImageFromBundle.h"
 
-#import "UINavigationController+FDFullscreenPopGesture.h"
+#import <UINavigationController+FDFullscreenPopGesture.h>
 
 
 @interface HXBaseViewController () {

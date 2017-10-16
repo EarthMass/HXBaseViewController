@@ -620,6 +620,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 92F34A6FC17EAC52320F075D /* Pods-BaseNavController.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -637,6 +638,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14ED392BFE75E660798CA1A6 /* Pods-BaseNavController.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
