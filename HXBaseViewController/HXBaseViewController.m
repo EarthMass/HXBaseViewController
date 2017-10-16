@@ -9,7 +9,7 @@
 #import "HXBaseViewController.h"
 #import "NSString+GetImageFromBundle.h"
 
-#import <UINavigationController+FDFullscreenPopGesture.h>
+#import "UINavigationController+FDFullscreenPopGesture.h"
 
 
 @interface HXBaseViewController () {
@@ -317,7 +317,7 @@
     }
     
     //导航左按钮
-    UIButton * leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     
     [leftBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [leftBtn setTitle:backStr forState:UIControlStateNormal];
