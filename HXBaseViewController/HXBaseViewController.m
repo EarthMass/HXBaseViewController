@@ -416,6 +416,9 @@
     }
     
     NSLog(@"------- %f %f %f %f",titleV.frame.origin.x,titleV.frame.origin.y,titleV.frame.size.width,titleV.frame.size.height);
+    if (self.navigationItem.titleView) {
+        self.navigationItem.titleView = nil;
+    }
     
     self.navigationItem.titleView = titleV;
 }
