@@ -63,7 +63,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     UIInterfaceOrientation interfaceOrientation = (UIInterfaceOrientation)[UIDevice currentDevice].orientation;
-    if (interfaceOrientation != UIInterfaceOrientationPortrait) {
+    if (interfaceOrientation != UIInterfaceOrientationPortrait && interfaceOrientation != UIInterfaceOrientationUnknown) {
         
             [self hiddenStatusBarOperate:_hiddenStatusBarWhenRotate];
         
@@ -177,7 +177,7 @@
 - (BOOL)prefersStatusBarHidden
 {
     UIInterfaceOrientation interfaceOrientation = (UIInterfaceOrientation)[UIDevice currentDevice].orientation;
-    if (interfaceOrientation != UIInterfaceOrientationPortrait) {
+    if (interfaceOrientation != UIInterfaceOrientationPortrait && interfaceOrientation != UIInterfaceOrientationUnknown) {
         return _hiddenStatusBarWhenRotate;
     } else {
         return _hiddenStatusBar;
@@ -474,7 +474,7 @@
 #pragma mark- 旋转到横屏隐藏 状态栏 旋转相关
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     NSLog(@"rotate TO %ld",(long)toInterfaceOrientation);
-    if (toInterfaceOrientation != UIInterfaceOrientationPortrait) {
+    if (toInterfaceOrientation != UIInterfaceOrientationPortrait && toInterfaceOrientation != UIInterfaceOrientationUnknown) {
         
          [self hiddenStatusBarOperate:_hiddenStatusBarWhenRotate];
         
