@@ -435,7 +435,7 @@
     
     CGFloat maxWidth = _cusLeftBtnW > _cusRightBtnW ? _cusLeftBtnW : _cusRightBtnW;
     
-    maxWidth += 15;//leftview 左右都有间隙，左边是5像素，右边是8像素，加2个像素的阀值 5 ＋ 8 ＋ 2
+    maxWidth += 15 + 15;//leftview 左右都有间隙，左边是5像素，右边是8像素，加2个像素的阀值 5 ＋ 8 ＋ 2
     
     frame.size.width = [UIScreen mainScreen].bounds.size.width - maxWidth * 2;
     frame.size.height = 44;
