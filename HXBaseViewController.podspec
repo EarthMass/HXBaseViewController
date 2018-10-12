@@ -95,7 +95,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  =  "HXBaseViewController/*.{h,m}"
-  s.exclude_files = "HXBaseViewController/HXBaseViewController.bundle"
+  s.resources = "HXBaseViewController/HXBaseViewController.bundle"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
