@@ -35,6 +35,7 @@
     
     self.nav = [self tabBarController];
     [self.window setRootViewController:self.nav];
+    
     [self.window makeKeyAndVisible];
     
     return YES;

@@ -62,17 +62,21 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    UIInterfaceOrientation interfaceOrientation = (UIInterfaceOrientation)[UIDevice currentDevice].orientation;
-    if (interfaceOrientation != UIInterfaceOrientationPortrait && interfaceOrientation != UIInterfaceOrientationUnknown) {
-        
+    
+    if (_canRotate) {
+        UIInterfaceOrientation interfaceOrientation = (UIInterfaceOrientation)[UIDevice currentDevice].orientation;
+        if (interfaceOrientation != UIInterfaceOrientationPortrait && interfaceOrientation != UIInterfaceOrientationUnknown) {
+            
             [self hiddenStatusBarOperate:_hiddenStatusBarWhenRotate];
-        
-    } else {
-        
-        [self hiddenStatusBarOperate:_hiddenStatusBar];
-        
-        
+            
+        } else {
+            
+            [self hiddenStatusBarOperate:_hiddenStatusBar];
+            
+            
+        }
     }
+   
 }
 
 #pragma mark- Init Setting
