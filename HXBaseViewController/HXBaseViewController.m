@@ -435,7 +435,7 @@
  */
 - (CGRect)getMaxTitleViewRect {
     
-    CGRect frame;
+    CGRect frame = CGRectZero;
     
     CGFloat maxWidth = _cusLeftBtnW > _cusRightBtnW ? _cusLeftBtnW : _cusRightBtnW;
     
