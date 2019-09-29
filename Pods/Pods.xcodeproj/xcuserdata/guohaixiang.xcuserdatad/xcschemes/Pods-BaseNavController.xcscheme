@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9D177C36A60FC73BCEA42785157D14C5'
-               BlueprintName = 'Pods-BaseNavController'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-BaseNavController.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "01D3FFB626E5048312022EF83641EC4B"
+               BuildableName = "libPods-BaseNavController.a"
+               BlueprintName = "Pods-BaseNavController"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

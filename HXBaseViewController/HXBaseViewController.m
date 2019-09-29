@@ -11,6 +11,12 @@
 
 #import "UINavigationController+FDFullscreenPopGesture.h"
 
+#if __has_include(<UINavigation-SXFixSpace/UINavigationSXFixSpace.h>)
+#import <UINavigation-SXFixSpace/UINavigationSXFixSpace.h>
+#endif
+
+
+
 
 @interface HXBaseViewController () {
     UINavigationBar * navBar;
@@ -29,6 +35,18 @@
 @end
 
 @implementation HXBaseViewController
+
++ (void)load {
+
+//导航栏按钮位置偏移的解决方案,兼容iOS7~iOS13,可自定义间距
+#if __has_include(<UINavigation-SXFixSpace/UINavigationSXFixSpace.h>)
+    [UINavigationConfig shared].sx_disableFixSpace = NO;//是否禁止使用修正,默认为NO
+    [UINavigationConfig shared].sx_defaultFixSpace = 0;//默认为0 可以修改 ios11+ 距离边缘的间距
+//    [UINavigationConfig shared].sx_fixedSpaceWidth = -20; //iOS11之前调整间距,默认为-20 =>边缘0
+#endif
+
+
+}
 
 #pragma mark- Cycle Life
 - (void)viewDidLoad {
@@ -206,8 +224,20 @@
 
 //设置状态栏颜色
 - (void)setStatusBarBackgroundColor:(UIColor *)color {
-    
-    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+
+    UIView *statusBar = nil;
+    if (@available(iOS 13.0, *)) {
+        UIStatusBarManager *statusBarManager = [UIApplication sharedApplication].keyWindow.windowScene.statusBarManager;
+        if ([statusBarManager respondsToSelector:@selector(createLocalStatusBar)]) {
+            UIView *_localStatusBar = [statusBarManager performSelector:@selector(createLocalStatusBar)];
+            if ([_localStatusBar respondsToSelector:@selector(statusBar)]) {
+                statusBar = [_localStatusBar performSelector:@selector(statusBar)];
+            }
+        }
+    } else {
+        // Fallback on earlier versions
+        statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    }
     NSLog(@"statusBar.backgroundColor--->%@",statusBar.backgroundColor);
     if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
         statusBar.backgroundColor = color;

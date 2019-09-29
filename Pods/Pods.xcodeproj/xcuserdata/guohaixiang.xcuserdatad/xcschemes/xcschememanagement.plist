@@ -9,24 +9,23 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HBDNavigationBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-BaseNavController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UINavigation-SXFixSpace.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>9D177C36A60FC73BCEA42785157D14C5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EE366E1E6962F82E6AEC8AE66FA66CBF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

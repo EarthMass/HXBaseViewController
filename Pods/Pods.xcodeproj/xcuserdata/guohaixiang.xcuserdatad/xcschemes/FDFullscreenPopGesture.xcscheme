@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'EE366E1E6962F82E6AEC8AE66FA66CBF'
-               BlueprintName = 'FDFullscreenPopGesture'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libFDFullscreenPopGesture.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8FE0EB310F454719A11FBFEAAC09FE3E"
+               BuildableName = "libFDFullscreenPopGesture.a"
+               BlueprintName = "FDFullscreenPopGesture"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
