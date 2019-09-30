@@ -226,7 +226,9 @@
 - (void)setStatusBarBackgroundColor:(UIColor *)color {
 
     UIView *statusBar = nil;
-    if (@available(iOS 13.0, *)) {
+
+
+#ifdef __IPHONE_13_0
         UIStatusBarManager *statusBarManager = [UIApplication sharedApplication].keyWindow.windowScene.statusBarManager;
         if ([statusBarManager respondsToSelector:@selector(createLocalStatusBar)]) {
             UIView *_localStatusBar = [statusBarManager performSelector:@selector(createLocalStatusBar)];
@@ -234,10 +236,10 @@
                 statusBar = [_localStatusBar performSelector:@selector(statusBar)];
             }
         }
-    } else {
-        // Fallback on earlier versions
-        statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
-    }
+#else
+         statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+#endif
+
     NSLog(@"statusBar.backgroundColor--->%@",statusBar.backgroundColor);
     if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
         statusBar.backgroundColor = color;
