@@ -53,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		133F517123599BC700FD2CA6 /* HXBaseVcGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXBaseVcGlobal.h; sourceTree = "<group>"; };
 		13449F5F2357F46000ECBD53 /* bgNavImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bgNavImage.jpg; sourceTree = "<group>"; };
 		13756C911F9442F300BE46C3 /* TabBarVC1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarVC1.h; sourceTree = "<group>"; };
 		13756C921F9442F300BE46C3 /* TabBarVC1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarVC1.m; sourceTree = "<group>"; };
@@ -162,6 +163,7 @@
 		13756CA71F949A6A00BE46C3 /* HXBaseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				133F517123599BC700FD2CA6 /* HXBaseVcGlobal.h */,
 				13756CAA1F949A6A00BE46C3 /* HXBaseViewController.bundle */,
 				13756CA81F949A6A00BE46C3 /* HXBaseNavgationController.h */,
 				13756CA91F949A6A00BE46C3 /* HXBaseNavgationController.m */,
