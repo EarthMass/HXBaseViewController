@@ -660,6 +660,8 @@ self.navigationController.fd_fullscreenPopGestureRecognizer.enabled = canFullScr
     return image;
 }
 
+
+
 - (void)pushRootNav:(UIViewController *)viewController animated:(BOOL)animated {
 
    id rootVC = [UIApplication sharedApplication].delegate.window.rootViewController;

@@ -121,7 +121,6 @@ typedef void(^GCusNavClickIndex)(NSInteger index);
                         imageSize:(CGSize)imageSize;
 - (HXBaseNavgationController *)addNav;
 + (UIImage *)imageWithSize:(CGSize)size image:(UIImage *)image;
-+ (UIImage *)imageWithColor:(UIColor *)
 
 //判断是否是根层级视图，普通视图
 - (void)pushRootNav:(UIViewController *)viewController animated:(BOOL)animated;
