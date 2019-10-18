@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HXBaseViewController/HXBaseViewController.m"
-            timestampString = "591501563.11198"
+            filePath = "Pods/FDFullscreenPopGesture/FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.m"
+            timestampString = "592967152.442771"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
-            landmarkName = "-setStatusBarBackgroundColor:"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "-fd_setupViewControllerBasedNavigationBarAppearanceIfNeeded:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HXBaseViewController/HXBaseViewController.m"
-            timestampString = "591501563.112337"
+            filePath = "Pods/FDFullscreenPopGesture/FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.m"
+            timestampString = "592967152.442835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
-            landmarkName = "-setStatusBarBackgroundColor:"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "-fd_setupViewControllerBasedNavigationBarAppearanceIfNeeded:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

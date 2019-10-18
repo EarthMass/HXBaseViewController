@@ -9,11 +9,15 @@
 #import "HXBaseViewController.h"
 #import "NSString+GetImageFromBundle.h"
 
+#if __has_include("UINavigationController+FDFullscreenPopGesture.h")
 #import "UINavigationController+FDFullscreenPopGesture.h"
+#endif
 
 #if __has_include(<UINavigation-SXFixSpace/UINavigationSXFixSpace.h>)
 #import <UINavigation-SXFixSpace/UINavigationSXFixSpace.h>
 #endif
+
+
 
 
 
@@ -32,6 +36,8 @@
 @property (nonatomic, assign) CGFloat cusRightBtnW;
 @property (nonatomic, assign) CGFloat cusLeftBtnW;
 
+
+
 @end
 
 @implementation HXBaseViewController
@@ -41,8 +47,8 @@
 //导航栏按钮位置偏移的解决方案,兼容iOS7~iOS13,可自定义间距
 #if __has_include(<UINavigation-SXFixSpace/UINavigationSXFixSpace.h>)
     [UINavigationConfig shared].sx_disableFixSpace = NO;//是否禁止使用修正,默认为NO
-    [UINavigationConfig shared].sx_defaultFixSpace = 0;//默认为0 可以修改 ios11+ 距离边缘的间距
-//    [UINavigationConfig shared].sx_fixedSpaceWidth = -20; //iOS11之前调整间距,默认为-20 =>边缘0
+    [UINavigationConfig shared].sx_defaultFixSpace = 10;//默认为0 可以修改 ios11+ 距离边缘的间距
+
 #endif
 
 
@@ -54,6 +60,7 @@
     [UIApplication sharedApplication].keyWindow.backgroundColor = GBackGroundColor;
     // Do any additional setup after loading the view.
     self.view.backgroundColor = GBackGroundColor;
+
     
     
     navBar = self.navigationController.navigationBar;
@@ -94,7 +101,59 @@
             
         }
     }
-   
+
+
+
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = self.canGesBack;
+    }
+#if __has_include("UINavigationController+FDFullscreenPopGesture.h")
+    self.navigationController.fd_fullscreenPopGestureRecognizer.enabled = _canFullScreenGesBack;
+#endif
+
+
+    if (_hiddenNavBar != !self.navigationController.navigationBar.hidden) {
+        if (_hiddenNavBar) {
+            [self.navigationController setNavigationBarHidden:_hiddenNavBar animated:NO];
+        } else {
+            [self.navigationController setNavigationBarHidden:_hiddenNavBar animated:NO];
+        }
+    }
+
+
+
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self updateNavigationBarAppearance];
+}
+
+- (void)updateNavigationBarAppearance {
+    NSLog(@"");
+    UIColor * statuBarColor = [_statusBarBackgroundColor copy];
+    self.statusBarBackgroundColor = statuBarColor;
+    //导航栏 字体 字色 背景色
+    [navBar
+     setTitleTextAttributes:
+     navBar.titleTextAttributes];
+    //导航背景颜色
+    UIColor * navBarColor = [_navBarColor copy];
+    self.navBarColor = navBarColor;
+
+    self.navBarTranslucent = _navBarTranslucent;
+    //状态栏设置
+    self.hiddenStatusBar = _hiddenStatusBar;
+
+    //状态栏 字体颜色 黑色/白色 默认白色
+    self.statusBarTextIsWhite = _statusBarTextIsWhite;
+    //导航透明 YES 透明
+    self.navBarTranslucent = _navBarTranslucent;
+
+    self.navBgImage = _navBgImage;
+
+    self.navShadowImage = _navShadowImage;
 }
 
 #pragma mark- Init Setting
@@ -105,7 +164,11 @@
     self.canRotate = NO;
     self.titleViewCenter = YES;
     self.hiddenStatusBarWhenRotate = YES;
+    self.hiddenNavBar = NO;
     self.edgesForExtendedLayout = UIRectEdgeNone;
+
+
+
 }
 
 /**
@@ -140,6 +203,7 @@
     [self navBtnInit];
     
 }
+
 
 - (void)navBtnInit {
     
@@ -180,6 +244,7 @@
 }
 
 - (void)hiddenStatusBarOperate:(BOOL)hiddenStatusBar {
+    _hiddenStatusBar = hiddenStatusBar;
     if (!isVcBaseApper) {
         [[UIApplication sharedApplication] setStatusBarHidden:hiddenStatusBar];
     } else {
@@ -213,6 +278,8 @@
 
 
 - (void)setStatusBarTextIsWhite:(BOOL)isWhite {
+
+    _statusBarTextIsWhite = isWhite;
     if (!isVcBaseApper) {
         [[UIApplication sharedApplication] setStatusBarStyle:(isWhite)?UIStatusBarStyleLightContent:UIStatusBarStyleDefault];
     } else {
@@ -224,11 +291,12 @@
 
 //设置状态栏颜色
 - (void)setStatusBarBackgroundColor:(UIColor *)color {
-
+    _statusBarBackgroundColor = color;
     UIView *statusBar = nil;
 
-
-#ifdef __IPHONE_13_0
+#if defined(__IPHONE_13_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_13_0
+    if(@available(iOS 13.0,*))
+    {
         UIStatusBarManager *statusBarManager = [UIApplication sharedApplication].keyWindow.windowScene.statusBarManager;
         if ([statusBarManager respondsToSelector:@selector(createLocalStatusBar)]) {
             UIView *_localStatusBar = [statusBarManager performSelector:@selector(createLocalStatusBar)];
@@ -236,6 +304,7 @@
                 statusBar = [_localStatusBar performSelector:@selector(statusBar)];
             }
         }
+    }
 #else
          statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
 #endif
@@ -248,7 +317,7 @@
 
 #pragma mark- 导航栏颜色 透明否
 - (void)setNavBarColor:(UIColor *)navColor {
-    
+    _navBarColor = navColor;
     if ([[[UIDevice currentDevice] systemVersion] doubleValue] <7.0) {
         
         [navBar setTintColor:navColor];
@@ -296,14 +365,16 @@
     _canGesBack = canGesBack;
     
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.enabled = self.canGesBack;
+        self.navigationController.interactivePopGestureRecognizer.enabled = _canGesBack;
     }   
 }
 
 - (void)setCanFullScreenGesBack:(BOOL)canFullScreenGesBack {
     _canFullScreenGesBack = canFullScreenGesBack;
-    
-    self.navigationController.fd_fullscreenPopGestureRecognizer.enabled = canFullScreenGesBack;
+#if __has_include("UINavigationController+FDFullscreenPopGesture.h")
+self.navigationController.fd_fullscreenPopGestureRecognizer.enabled = canFullScreenGesBack;
+#endif
+
 
 }
 
@@ -319,6 +390,10 @@
         return;
     }
     [self setTitleV:_titleV];
+}
+
+- (void)setHiddenNavBar:(BOOL)hiddenNavBar {
+    _hiddenNavBar = hiddenNavBar;
 }
 
 #pragma mark- 文字标题
@@ -373,6 +448,21 @@
 - (void)setBackImage:(UIImage *)backImage {
     [leftBtn setImageEdgeInsets:UIEdgeInsetsZero];
     [leftBtn setImage:backImage forState:UIControlStateNormal];
+}
+
+- (void)setNavBgImage:(UIImage *)bgImage {
+    _navBgImage = bgImage;
+    if (_navBgImage) {
+         [self.navigationController.navigationBar setBackgroundImage:bgImage forBarMetrics:UIBarMetricsDefault];
+    }
+
+}
+
+- (void)setNavShadowImage:(UIImage *)navShadowImage {
+    _navShadowImage = navShadowImage;
+    if (_navShadowImage) {
+        [self.navigationController.navigationBar setShadowImage:_navShadowImage];
+    }
 }
 
 #pragma mark-
@@ -538,7 +628,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 #pragma mark- Util
 - (instancetype)setTabBarItemWithTitle:(NSString *)title
                titleUnSelectStyle:(NSDictionary *)titleUnSelectStyle
@@ -548,8 +637,8 @@
                         imageSize:(CGSize)imageSize {
     
     self.tabBarItem.title = title;
-    [self.tabBarItem setSelectedImage:[self imageWithSize:imageSize image:selectImage]];
-    [self.tabBarItem setImage:[self imageWithSize:imageSize image:unselectImage]];
+    [self.tabBarItem setSelectedImage:[self.class imageWithSize:imageSize image:selectImage]];
+    [self.tabBarItem setImage:[self.class imageWithSize:imageSize image:unselectImage]];
     
     [self.tabBarItem setTitleTextAttributes:titleUnSelectStyle forState:UIControlStateNormal];
     [self.tabBarItem setTitleTextAttributes:titleSelectStyle forState:UIControlStateSelected];
@@ -557,12 +646,12 @@
     return self;
 }
 
-- (UINavigationController *)addNav {
-    UINavigationController * nav = [[UINavigationController  alloc] initWithRootViewController:self];
+- (HXBaseNavgationController *)addNav {
+    HXBaseNavgationController * nav = [[HXBaseNavgationController  alloc] initWithRootViewController:self];
     return nav;
 }
 
-- (UIImage *)imageWithSize:(CGSize)size image:(UIImage *)image {
++ (UIImage *)imageWithSize:(CGSize)size image:(UIImage *)image {
     UIGraphicsBeginImageContext(size);
     [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
     image =   [UIGraphicsGetImageFromCurrentImageContext() imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -572,6 +661,7 @@
 }
 
 - (void)pushRootNav:(UIViewController *)viewController animated:(BOOL)animated {
+
    id rootVC = [UIApplication sharedApplication].delegate.window.rootViewController;
     if ([rootVC isKindOfClass:[UINavigationController class]]) {
         UINavigationController * rootVCNav = rootVC;

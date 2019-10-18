@@ -7,6 +7,7 @@
 //
 
 #import "SamplePushVC.h"
+#import "TwoVC.h"
 
 @implementation SamplePushVC
 #pragma mark- cycle life
@@ -14,7 +15,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.title= @" title";
-    
+
+    self.hiddenNavBar = NO;
+    self.statusBarTextIsWhite = NO;
+
+    self.navBgImage = [UIImage imageNamed:@"bgNavImage.jpg"];
+    self.navShadowImage = [UIImage imageNamed:@"bgNavImage.jpg"];
+
     //按钮
     UIButton * go = [[UIButton alloc] initWithFrame:CGRectMake(0, 80, 50, 30)];
     [go addTarget:self action:@selector(goClick) forControlEvents:UIControlEventTouchUpInside];
@@ -31,7 +38,8 @@
 
 #pragma mark- Event
 - (void)goClick {
-    HXBaseViewController * vc = [[HXBaseViewController alloc] init];
+
+    TwoVC * vc = [[TwoVC alloc] init];
     //    AppDelegate * app = (AppDelegate *)[UIApplication sharedApplication].delegate;
     //    [app.nav pushViewController:vc animated:YES];
     [self pushRootNav:vc animated:YES];

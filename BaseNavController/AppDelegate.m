@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+#import "HXBaseNavgationController.h"
 #import "BaseNavVCDemo.h" ///<自定义导航
 
 //tabBarController
@@ -16,7 +17,7 @@
 #import "TabBarVC3.h"
 #import "TabBarVC4.h"
 
-#import "HXTabBarController.h"
+
 
 @interface AppDelegate ()
 
@@ -41,10 +42,10 @@
     return YES;
 }
 
-- (UINavigationController *)tabBarController {
+- (HXBaseNavgationController *)tabBarController {
     
     
-    HXTabBarController * tabBarC = [[HXTabBarController alloc] init];
+    UITabBarController * tabBarC = [[UITabBarController alloc] init];
     
     TabBarVC1 * tabBarVC1 = [[TabBarVC1 alloc] init];
     [tabBarVC1 setTabBarItemWithTitle:@"111" titleUnSelectStyle:nil titleSelectStyle:nil unselectImage:[UIImage imageNamed:@"tab.png"] selectImage:[UIImage imageNamed:@"barItemIcon"] imageSize:CGSizeMake(30, 30)];
@@ -60,8 +61,9 @@
     
     tabBarC.viewControllers = @[[tabBarVC1 addNav],[tabBarVC2 addNav],[tabBarVC3 addNav],[tabBarVC4 addNav]];
     
-    UINavigationController * rootNav = [[UINavigationController alloc ] initWithRootViewController:tabBarC];
+    HXBaseNavgationController * rootNav = [[HXBaseNavgationController alloc ] initWithRootViewController:tabBarC];
     [rootNav setNavigationBarHidden:YES];
+    [rootNav.navigationController.navigationBar setHidden:YES];
     return rootNav;
 }
 

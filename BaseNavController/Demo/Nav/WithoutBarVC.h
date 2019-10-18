@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HXBaseViewController.h"
 
-@interface WithoutBarVC : UIViewController
+@interface WithoutBarVC : HXBaseViewController
 
 @end

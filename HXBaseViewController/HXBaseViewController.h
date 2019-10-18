@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UINavigationItem+margin.h"
+#import "HXBaseNavgationController.h"
 
 //视图背景颜色
 #define GBackGroundColor [UIColor colorWithRed:0.960 green:1.000 blue:0.984 alpha:1.000]
@@ -43,6 +44,7 @@ typedef void(^GCusNavClickIndex)(NSInteger index);
  */
 @interface HXBaseViewController : UIViewController
 
+#warning 在vc内部设置才有效
 /**
  *  自定义视图 右侧按钮 左侧按钮 标题
  */
@@ -57,6 +59,8 @@ typedef void(^GCusNavClickIndex)(NSInteger index);
 @property (nonatomic, copy) NSString * rightStr;
 
 @property (nonatomic, strong) UIImage * backImage;
+@property (nonatomic, strong) UIImage * navBgImage;
+@property (nonatomic, strong) UIImage * navShadowImage;
 
 @property (nonatomic, assign) BOOL hiddenStatusBar; ///<状态栏隐藏 默认显示NO
 @property (nonatomic, assign) BOOL hiddenStatusBarWhenRotate; ///<旋转时是否隐藏状态栏
@@ -69,10 +73,13 @@ typedef void(^GCusNavClickIndex)(NSInteger index);
 @property (nonatomic, assign) BOOL canRotate; ///<是否支持旋转 默认NO ,YES工程必须支持旋转才有效
 @property (nonatomic, assign) BOOL titleViewCenter; ///<标题栏 是否居中 默认 居中,YES 根据边缘的最大，确定中间大小， NO 中间文字充满
 
+@property (nonatomic, assign) BOOL hiddenNavBar; //隐藏导航栏 default NO
+
+
 #pragma mark- 全局的 改变一个影响全部的视图,直到重新设置
 @property (nonatomic, assign) BOOL statusBarTextIsWhite; ///<状态栏字体颜色  默认白色
-@property (nonatomic, assign) UIColor * statusBarBackgroundColor; ///<状态栏颜色
-@property (nonatomic, assign) UIColor * navBarColor; ///<导航栏颜色 配置
+@property (nonatomic, strong) UIColor * statusBarBackgroundColor; ///<状态栏颜色
+@property (nonatomic, strong) UIColor * navBarColor; ///<导航栏颜色 配置
 
 /**
  *   YES 需要加这个 在当前控制器中 否则 导航栏底部显示的是window view起点从y = 64开始
@@ -112,8 +119,11 @@ typedef void(^GCusNavClickIndex)(NSInteger index);
                     unselectImage:(UIImage *)unselectImage
                       selectImage:(UIImage *)selectImage
                         imageSize:(CGSize)imageSize;
-- (UINavigationController *)addNav;
-//- (UIImage *)imageWithSize:(CGSize)size image:(UIImage *)image;
+- (HXBaseNavgationController *)addNav;
++ (UIImage *)imageWithSize:(CGSize)size image:(UIImage *)image;
++ (UIImage *)imageWithColor:(UIColor *)
+
+//判断是否是根层级视图，普通视图
 - (void)pushRootNav:(UIViewController *)viewController animated:(BOOL)animated;
 
 @end

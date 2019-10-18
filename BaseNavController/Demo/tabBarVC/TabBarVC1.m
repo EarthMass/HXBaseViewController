@@ -19,10 +19,14 @@
     
     [self initUI];
     [self initNav];
-    
-    
-    
+
+    self.hiddenNavBar = YES;
+
+    self.navBarColor = [UIColor yellowColor];
+
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -51,6 +55,7 @@
 
 #pragma mark- Event
 - (void)goClick {
+
     SamplePushVC * vc = [[SamplePushVC alloc] init];
     [self pushRootNav:vc animated:YES];
 }

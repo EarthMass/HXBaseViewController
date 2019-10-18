@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13449F602357F46000ECBD53 /* bgNavImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13449F5F2357F46000ECBD53 /* bgNavImage.jpg */; };
 		13756C9F1F944C8E00BE46C3 /* tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 13756C9E1F944ADD00BE46C3 /* tab.png */; };
 		13756CA01F944C9200BE46C3 /* barItemIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13756C9D1F9445FD00BE46C3 /* barItemIcon.png */; };
 		13756CB31F949AA400BE46C3 /* HXBaseViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 13756CAA1F949A6A00BE46C3 /* HXBaseViewController.bundle */; };
-		13756CCA1F94A69400BE46C3 /* BaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CA91F949A6A00BE46C3 /* BaseNavgationController.m */; };
+		13756CCA1F94A69400BE46C3 /* HXBaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CA91F949A6A00BE46C3 /* HXBaseNavgationController.m */; };
 		13756CCB1F94A69400BE46C3 /* HXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CAC1F949A6A00BE46C3 /* HXBaseViewController.m */; };
-		13756CCC1F94A69400BE46C3 /* HXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CAE1F949A6A00BE46C3 /* HXTabBarController.m */; };
 		13756CCD1F94A69400BE46C3 /* NSString+GetImageFromBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CB01F949A6A00BE46C3 /* NSString+GetImageFromBundle.m */; };
 		13756CCE1F94A69400BE46C3 /* UINavigationItem+margin.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CB21F949A6A00BE46C3 /* UINavigationItem+margin.m */; };
 		13756CCF1F94A69400BE46C3 /* BaseNavVCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CBB1F949C4500BE46C3 /* BaseNavVCDemo.m */; };
@@ -53,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13449F5F2357F46000ECBD53 /* bgNavImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bgNavImage.jpg; sourceTree = "<group>"; };
 		13756C911F9442F300BE46C3 /* TabBarVC1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarVC1.h; sourceTree = "<group>"; };
 		13756C921F9442F300BE46C3 /* TabBarVC1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarVC1.m; sourceTree = "<group>"; };
 		13756C941F94430300BE46C3 /* TabBarVC2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarVC2.h; sourceTree = "<group>"; };
@@ -65,13 +66,11 @@
 		13756C9E1F944ADD00BE46C3 /* tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab.png; sourceTree = "<group>"; };
 		13756CA41F9480A900BE46C3 /* SamplePushVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SamplePushVC.h; sourceTree = "<group>"; };
 		13756CA51F9480A900BE46C3 /* SamplePushVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SamplePushVC.m; sourceTree = "<group>"; };
-		13756CA81F949A6A00BE46C3 /* BaseNavgationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavgationController.h; sourceTree = "<group>"; };
-		13756CA91F949A6A00BE46C3 /* BaseNavgationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavgationController.m; sourceTree = "<group>"; };
+		13756CA81F949A6A00BE46C3 /* HXBaseNavgationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXBaseNavgationController.h; sourceTree = "<group>"; };
+		13756CA91F949A6A00BE46C3 /* HXBaseNavgationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXBaseNavgationController.m; sourceTree = "<group>"; };
 		13756CAA1F949A6A00BE46C3 /* HXBaseViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HXBaseViewController.bundle; sourceTree = "<group>"; };
 		13756CAB1F949A6A00BE46C3 /* HXBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXBaseViewController.h; sourceTree = "<group>"; };
 		13756CAC1F949A6A00BE46C3 /* HXBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXBaseViewController.m; sourceTree = "<group>"; };
-		13756CAD1F949A6A00BE46C3 /* HXTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXTabBarController.h; sourceTree = "<group>"; };
-		13756CAE1F949A6A00BE46C3 /* HXTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXTabBarController.m; sourceTree = "<group>"; };
 		13756CAF1F949A6A00BE46C3 /* NSString+GetImageFromBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GetImageFromBundle.h"; sourceTree = "<group>"; };
 		13756CB01F949A6A00BE46C3 /* NSString+GetImageFromBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GetImageFromBundle.m"; sourceTree = "<group>"; };
 		13756CB11F949A6A00BE46C3 /* UINavigationItem+margin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+margin.h"; sourceTree = "<group>"; };
@@ -143,6 +142,7 @@
 		13756C901F9442CA00BE46C3 /* tabBarVC */ = {
 			isa = PBXGroup;
 			children = (
+				13449F5F2357F46000ECBD53 /* bgNavImage.jpg */,
 				13756C9E1F944ADD00BE46C3 /* tab.png */,
 				13756C9D1F9445FD00BE46C3 /* barItemIcon.png */,
 				13756C911F9442F300BE46C3 /* TabBarVC1.h */,
@@ -163,12 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				13756CAA1F949A6A00BE46C3 /* HXBaseViewController.bundle */,
-				13756CA81F949A6A00BE46C3 /* BaseNavgationController.h */,
-				13756CA91F949A6A00BE46C3 /* BaseNavgationController.m */,
+				13756CA81F949A6A00BE46C3 /* HXBaseNavgationController.h */,
+				13756CA91F949A6A00BE46C3 /* HXBaseNavgationController.m */,
 				13756CAB1F949A6A00BE46C3 /* HXBaseViewController.h */,
 				13756CAC1F949A6A00BE46C3 /* HXBaseViewController.m */,
-				13756CAD1F949A6A00BE46C3 /* HXTabBarController.h */,
-				13756CAE1F949A6A00BE46C3 /* HXTabBarController.m */,
 				13756CAF1F949A6A00BE46C3 /* NSString+GetImageFromBundle.h */,
 				13756CB01F949A6A00BE46C3 /* NSString+GetImageFromBundle.m */,
 				13756CB11F949A6A00BE46C3 /* UINavigationItem+margin.h */,
@@ -384,6 +382,7 @@
 			files = (
 				13756CB31F949AA400BE46C3 /* HXBaseViewController.bundle in Resources */,
 				4EED5B741CF5ADA3004E59E3 /* LaunchScreen.storyboard in Resources */,
+				13449F602357F46000ECBD53 /* bgNavImage.jpg in Resources */,
 				4EED5B711CF5ADA3004E59E3 /* Assets.xcassets in Resources */,
 				4EED5B6F1CF5ADA3004E59E3 /* Main.storyboard in Resources */,
 				13756CA01F944C9200BE46C3 /* barItemIcon.png in Resources */,
@@ -434,9 +433,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13756CDD1F94A6F900BE46C3 /* OneVC.m in Sources */,
-				13756CCA1F94A69400BE46C3 /* BaseNavgationController.m in Sources */,
+				13756CCA1F94A69400BE46C3 /* HXBaseNavgationController.m in Sources */,
 				13756CCB1F94A69400BE46C3 /* HXBaseViewController.m in Sources */,
-				13756CCC1F94A69400BE46C3 /* HXTabBarController.m in Sources */,
 				13756CE01F94A72600BE46C3 /* UIButton+InBlock.m in Sources */,
 				13756CCD1F94A69400BE46C3 /* NSString+GetImageFromBundle.m in Sources */,
 				13756CCE1F94A69400BE46C3 /* UINavigationItem+margin.m in Sources */,
