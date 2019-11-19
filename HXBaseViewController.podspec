@@ -16,8 +16,9 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HXBaseViewController"
-  s.version      = "1.1.3"
+  s.version      = "1.1.4"
   s.summary      = "快速搭建界面的导航栏配置"
+
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -29,6 +30,7 @@ Pod::Spec.new do |s|
 使用简单
 支持旋转，导航栏等配置。 通过继承 HXBaseViewController 类，对带导航的界面进行定制，类中已做了初始化设置，
 最好是 继承 HXBaseViewController 配置样式，然后继承你自定义的类。
+
                    DESC
 
   s.homepage     = "https://github.com/EarthMass/HXBaseViewController"

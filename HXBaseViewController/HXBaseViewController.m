@@ -357,7 +357,10 @@
 - (void)setHiddenLeftBtn:(BOOL)hiddenLeftBtn {
     //    leftBarButtonItem
     _hiddenLeftBtn = hiddenLeftBtn;
-    self.navigationItem.leftBarButtonItem = nil;
+    if (_hiddenLeftBtn) {
+        self.navigationItem.leftBarButtonItem = nil;
+    }
+
 }
 
 //手势 返回 开关
@@ -470,6 +473,9 @@ self.navigationController.fd_fullscreenPopGestureRecognizer.enabled = canFullScr
 #pragma mark- 自定义视图
 - (void)setLeftBtnV:(UIView *)leftBtnV {
     if (!leftBtnV) {
+        return;
+    }
+    if (self.hiddenLeftBtn) {
         return;
     }
     _leftBtnV = leftBtnV;
