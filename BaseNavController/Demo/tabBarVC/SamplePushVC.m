@@ -19,8 +19,8 @@
     self.hiddenNavBar = NO;
     self.statusBarTextIsWhite = NO;
 
-    self.navBgImage = [UIImage imageNamed:@"bgNavImage.jpg"];
-    self.navShadowImage = [UIImage imageNamed:@"bgNavImage.jpg"];
+//    self.navBgImage = [UIImage imageNamed:@"bgNavImage.jpg"];
+//    self.navShadowImage = [UIImage imageNamed:@"bgNavImage.jpg"];
 
     //按钮
     UIButton * go = [[UIButton alloc] initWithFrame:CGRectMake(0, 80, 50, 30)];

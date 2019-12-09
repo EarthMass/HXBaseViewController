@@ -672,7 +672,7 @@
 }
 
 + (UIImage *)imageWithSize:(CGSize)size image:(UIImage *)image {
-    UIGraphicsBeginImageContext(size);
+    UIGraphicsBeginImageContextWithOptions(size, NO,0.0);
     [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
     image =   [UIGraphicsGetImageFromCurrentImageContext() imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
