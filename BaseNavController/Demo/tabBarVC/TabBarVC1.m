@@ -20,7 +20,7 @@
     [self initUI];
     [self initNav];
 
-    self.hiddenNavBar = YES;
+    self.hiddenNavBar = NO;
 
     self.navBarColor = [UIColor yellowColor];
 

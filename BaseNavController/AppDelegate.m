@@ -30,12 +30,12 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 //    //自定导航栏
-//    BaseNavVCDemo * navView =  [[BaseNavVCDemo alloc] init];
-//    UINavigationController * viewC = [[UINavigationController alloc] initWithRootViewController:navView];
-//    [self.window setRootViewController:viewC];
+    BaseNavVCDemo * navView =  [[BaseNavVCDemo alloc] init];
+    UINavigationController * viewC = [[UINavigationController alloc] initWithRootViewController:navView];
+    [self.window setRootViewController:viewC];
     
-    self.nav = [self tabBarController];
-    [self.window setRootViewController:self.nav];
+//    self.nav = [self tabBarController];
+//    [self.window setRootViewController:self.nav];
     
     [self.window makeKeyAndVisible];
     

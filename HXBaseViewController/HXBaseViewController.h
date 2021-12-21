@@ -81,6 +81,8 @@ typedef void(^GCusNavClickIndex)(NSInteger index);
 @property (nonatomic, strong) UIColor * statusBarBackgroundColor; ///<状态栏颜色
 @property (nonatomic, strong) UIColor * navBarColor; ///<导航栏颜色 配置
 
+@property (nonatomic, strong) NSDictionary<NSAttributedStringKey, id> * titleTextAttributes; ///<导航栏标题字体
+
 /**
  *   YES 需要加这个 在当前控制器中 否则 导航栏底部显示的是window view起点从y = 64开始
  *  #ifdef __IPHONE_7_0

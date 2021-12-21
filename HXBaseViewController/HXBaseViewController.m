@@ -18,16 +18,11 @@
 #endif
 
 
+@interface HXBaseViewController ()
 
-
-
-
-@interface HXBaseViewController () {
-    UINavigationBar * navBar;
-    BOOL isVcBaseApper; ///< 导航的设置优先级
-
-    UIButton * leftBtn;
-}
+@property (nonatomic, strong) UIButton * leftBtn;;
+@property (nonatomic, assign)  BOOL isVcBaseApper; ///< 导航的设置优先级
+@property (nonatomic, strong) UINavigationBar * navBar;
 
 @property (nonatomic, copy) GCusNavClickIndex cusNavClickIndex;
 /**
@@ -63,7 +58,7 @@
 
 
 
-    navBar = self.navigationController.navigationBar;
+   self.navBar = self.navigationController.navigationBar;
 
     //#pragma mark- 判断 导航的设置优先级 为 控制器 否则有些设置会无效
 
@@ -72,9 +67,9 @@
     //    BOOL isVCBasedStatusBarAppearance = [[[NSBundle mainBundle]objectForInfoDictionaryKey:@"UIViewControllerBasedStatusBarAppearance"] boolValue];
     //    NSAssert(isVCBasedStatusBarAppearance, @"*******BaseNavViewController已VC作为根视图 \n请在Info.plist中设置UIViewControllerBasedStatusBarAppearance 为YES---\n否则以AppDelegate中的设置为准，或通过[UIApplication sharedApplication] setStatusBarHidden*******");
     if (isVCBasedStatusBarAppearance != nil) {
-        isVcBaseApper = ([isVCBasedStatusBarAppearance boolValue])?YES:NO;
+        self.isVcBaseApper = ([isVCBasedStatusBarAppearance boolValue])?YES:NO;
     } else {
-        isVcBaseApper = YES;
+        self.isVcBaseApper = YES;
     }
 
     [self setOther];
@@ -140,9 +135,9 @@
     UIColor * statuBarColor = [_statusBarBackgroundColor copy];
     self.statusBarBackgroundColor = statuBarColor;
     //导航栏 字体 字色 背景色
-    [navBar
+    [self.navBar
      setTitleTextAttributes:
-     navBar.titleTextAttributes];
+         self.titleTextAttributes];
     //导航背景颜色
     UIColor * navBarColor = [_navBarColor copy];
     self.navBarColor = navBarColor;
@@ -184,12 +179,11 @@
     self.statusBarBackgroundColor = GNavBgColor;
 
     //导航栏 字体 字色 背景色
-    [navBar
-     setTitleTextAttributes:
-     @{
-       NSForegroundColorAttributeName:GNavTextColor,
-       NSFontAttributeName:GNavTextFont,
-       }];
+    self.titleTextAttributes = @{
+        NSForegroundColorAttributeName:GNavTextColor,
+        NSFontAttributeName:GNavTextFont,
+    };
+   
     //导航背景颜色
     self.navBarColor = GNavBgColor;
 
@@ -211,17 +205,17 @@
 - (void)navBtnInit {
 
     //导航左按钮
-    leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [leftBtn setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
+    self.leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.leftBtn setImageEdgeInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
 
-    [leftBtn setImage:[NSString getImageOfImageName:GNavBackImageName type:BaseNavController] forState:UIControlStateNormal];
-    [leftBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.leftBtn setImage:[NSString getImageOfImageName:GNavBackImageName type:BaseNavController] forState:UIControlStateNormal];
+    [self.leftBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
 
-    [leftBtn sizeToFit];
+    [self.leftBtn sizeToFit];
 
-    self.cusLeftBtnW = leftBtn.bounds.size.width;
+    self.cusLeftBtnW = self.leftBtn.bounds.size.width;
 
-    UIBarButtonItem * leftButton = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    UIBarButtonItem * leftButton = [[UIBarButtonItem alloc] initWithCustomView:self.leftBtn];
     self.navigationItem.leftBarButtonItem = leftButton;
 
 }
@@ -248,7 +242,7 @@
 
 - (void)hiddenStatusBarOperate:(BOOL)hiddenStatusBar {
     _hiddenStatusBar = hiddenStatusBar;
-    if (!isVcBaseApper) {
+    if (!self.isVcBaseApper) {
         [[UIApplication sharedApplication] setStatusBarHidden:hiddenStatusBar];
     } else {
 
@@ -283,10 +277,10 @@
 - (void)setStatusBarTextIsWhite:(BOOL)isWhite {
 
     _statusBarTextIsWhite = isWhite;
-    if (!isVcBaseApper) {
+    if (!self.isVcBaseApper) {
         [[UIApplication sharedApplication] setStatusBarStyle:(isWhite)?UIStatusBarStyleLightContent:UIStatusBarStyleDefault];
     } else {
-        [navBar setBarStyle:(isWhite)?UIBarStyleBlack:UIBarStyleDefault];
+        [self.navBar setBarStyle:(isWhite)?UIBarStyleBlack:UIBarStyleDefault];
     }
 
 
@@ -321,39 +315,77 @@
 #pragma mark- 导航栏颜色 透明否
 - (void)setNavBarColor:(UIColor *)navColor {
     _navBarColor = navColor;
-    if ([[[UIDevice currentDevice] systemVersion] doubleValue] <7.0) {
+    if ([[[UIDevice currentDevice] systemVersion] doubleValue] < 7.0) {
 
-        [navBar setTintColor:navColor];
+        [self.navBar setTintColor:navColor];
 
     }else
     {
-        [navBar setBarTintColor:navColor];
+     
+        if (@available(iOS 15.0, *)) {
+            UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
+
+            [appearance configureWithOpaqueBackground];
+
+            appearance.backgroundColor = navColor;
+            self.navBar.standardAppearance = appearance;
+            self.navBar.scrollEdgeAppearance = self.navBar.standardAppearance;
+        }
+        [self.navBar setBarTintColor:navColor];
+        
     }
     _navBarColor = navColor;
 }
+
+
 - (void)setNavBarTranslucent:(BOOL)translucent {
     _navBarTranslucent = translucent;
-    navBar.translucent = translucent;
+    self.navBar.translucent = translucent;
     if (translucent) {
         self.edgesForExtendedLayout = UIRectEdgeTop;
 
+        if (@available(iOS 15.0, *)) {
+            UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
+
+            [appearance configureWithOpaqueBackground];
+            appearance.shadowColor = [UIColor clearColor];
+            self.navBar.standardAppearance = appearance;
+            self.navBar.scrollEdgeAppearance = self.navBar.standardAppearance;
+        }
+        
         //设置导航栏背景图片为一个空的image，这样就透明了
-        [navBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+        [self.navBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
 
         //去掉透明后导航栏下边的黑边
-        [navBar setShadowImage:[[UIImage alloc] init]];
+        [self.navBar setShadowImage:[[UIImage alloc] init]];
         //        navBar.layer.masksToBounds = YES;// 去掉横线（没有这一行代码导航栏的最下面还会有一个横线）
 
+      
     }
     else {
         self.edgesForExtendedLayout = UIRectEdgeNone;
         //    如果不想让其他页面的导航栏变为透明 需要重置
-        [navBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-        [navBar setShadowImage:nil];
+        [self.navBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+        [self.navBar setShadowImage:nil];
 
     }
 
 
+}
+
+- (void)setTitleTextAttributes:(NSDictionary<NSAttributedStringKey,id> *)titleTextAttributes {
+    
+    if (@available(iOS 15.0, *)) {
+        UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
+        [appearance configureWithOpaqueBackground];
+        [appearance setTitleTextAttributes:titleTextAttributes];
+        self.navBar.standardAppearance = appearance;
+        self.navBar.scrollEdgeAppearance = self.navBar.standardAppearance;
+    }
+    [self.navBar
+     setTitleTextAttributes:titleTextAttributes];
+    
+    
 }
 
 #pragma mark- 属性设置
@@ -441,26 +473,26 @@
     }
 
     //导航左按钮
-    leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
 
-    [leftBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [leftBtn setTitle:backStr forState:UIControlStateNormal];
-    [leftBtn setTitleColor:GNavBtnTitleColorNormal forState:UIControlStateNormal];
-    [leftBtn setTitleColor:GNavBtnTitleColorSelect forState:UIControlStateHighlighted];
-    leftBtn.titleLabel.font = GNavBtnTitleFont;
+    [self.leftBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.leftBtn setTitle:backStr forState:UIControlStateNormal];
+    [self.leftBtn setTitleColor:GNavBtnTitleColorNormal forState:UIControlStateNormal];
+    [self.leftBtn setTitleColor:GNavBtnTitleColorSelect forState:UIControlStateHighlighted];
+    self.leftBtn.titleLabel.font = GNavBtnTitleFont;
 
-    [leftBtn sizeToFit];
+    [self.leftBtn sizeToFit];
 
-    self.cusLeftBtnW = leftBtn.bounds.size.width;
+    self.cusLeftBtnW = self.leftBtn.bounds.size.width;
 
-    UIBarButtonItem * leftButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    UIBarButtonItem * leftButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.leftBtn];
     self.navigationItem.leftBarButtonItem = leftButtonItem;
 
 }
 
 - (void)setBackImage:(UIImage *)backImage {
-    [leftBtn setImageEdgeInsets:UIEdgeInsetsZero];
-    [leftBtn setImage:backImage forState:UIControlStateNormal];
+    [self.leftBtn setImageEdgeInsets:UIEdgeInsetsZero];
+    [self.leftBtn setImage:backImage forState:UIControlStateNormal];
 }
 
 - (void)setNavBgImage:(UIImage *)bgImage {

@@ -43,18 +43,26 @@
     tableV.dataSource = self;
     [self setExtraCellLineHidden:tableV];
     [self.view addSubview:tableV];
-    tableV.backgroundColor = [UIColor grayColor];
     
+    tableV.backgroundColor = [UIColor whiteColor];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
 }
 
 #pragma mark- init
 - (void)initNav {
+    
+    
+    
     self.title = @"导航栏";
     self.rightStr = @"右阿牛你";
     self.hiddenLeftBtn = YES;
     self.backStr = @"1212";
     self.statusBarTextIsWhite = YES;
+    
+    self.navBarColor = [UIColor redColor];
+    self.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor yellowColor]};
 }
 
 - (void)didReceiveMemoryWarning {

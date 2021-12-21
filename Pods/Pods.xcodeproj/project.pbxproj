@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B506293B97B0AA1FDB5D01A3CAC7282 /* Pods-BaseNavController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DB0368AB582E29C0469DC20F6477F0 /* Pods-BaseNavController-dummy.m */; };
-		239E9A2B028258D76D542453AA4EFCE1 /* UINavigationSXFixSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C983E9A92E19BDA638D8FBD25F9EF97 /* UINavigationSXFixSpace.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3EB666A6992234BE80ADA5A8DDC7998E /* UINavigationSXFixSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = 482FD27B1001E2D00437185E7266098C /* UINavigationSXFixSpace.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		40442014A2E1A5F48B54FF96592114C8 /* FDFullscreenPopGesture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA012A36AA55DEEDA5EA20725396FD9 /* FDFullscreenPopGesture-dummy.m */; };
-		68A84B33C46228A574DD01B9A8FFC464 /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5E3A75A0CFEECF8481F926C95362E7 /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7C30B4B863111118FC059034DF5B432B /* UINavigation-SXFixSpace-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8568F6097C0B2F472243964C50E99E /* UINavigation-SXFixSpace-dummy.m */; };
-		E848C4108D4834AA905648BAE1E52A7A /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 90376493FFFD737C19A4FD09AC7DDFF7 /* UINavigationController+FDFullscreenPopGesture.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		19AE48B15B3D3F4E8E0FA9101B476B55 /* FDFullscreenPopGesture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7320250C727ECE3D5ADD375C5C139BE0 /* FDFullscreenPopGesture-dummy.m */; };
+		49E9E7EC05C2FDF228B9CE2AA6059A23 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C445D66AB08D45267FB6FC3EA115E8F /* UINavigationController+FDFullscreenPopGesture.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		70597BEA6425C510CB7950A193D4D381 /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = D835F7749E9227C7E31AA0C98D6B4E9F /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		99195F3F634F5E9C5BA925ED2E1C298A /* UINavigationSXFixSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B71AF741FC115E923D1AE7975404F2 /* UINavigationSXFixSpace.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9D31C61B484DE2D35CE90D841FF63D82 /* UINavigation-SXFixSpace-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA25D242692D1179B2639531D2E771E /* UINavigation-SXFixSpace-dummy.m */; };
+		C22AB04C1320A1D29961D9F155545E6F /* Pods-BaseNavController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DB0368AB582E29C0469DC20F6477F0 /* Pods-BaseNavController-dummy.m */; };
+		EDB69E32477041D418EFB67798631257 /* UINavigationSXFixSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = 4108FFFE04B686B4BB57165397F28CC2 /* UINavigationSXFixSpace.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		53FABE58876E7A2561DF97A24A871D49 /* PBXContainerItemProxy */ = {
+		AE2C3E16CD950D3FD900A09D21EF19E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8FE0EB310F454719A11FBFEAAC09FE3E;
 			remoteInfo = FDFullscreenPopGesture;
 		};
-		65E7D539208785EED251CB0226D588C0 /* PBXContainerItemProxy */ = {
+		E6CDFFABEE8A8F474894EEB169FE15A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -34,43 +34,45 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1959971D46B17408CFC8813BD7864706 /* UINavigation-SXFixSpace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UINavigation-SXFixSpace.release.xcconfig"; sourceTree = "<group>"; };
 		21292309E1712178281DA2396A82AC9C /* Pods-BaseNavController-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BaseNavController-acknowledgements.markdown"; sourceTree = "<group>"; };
-		25D3C38157C29704810157432B809AB8 /* FDFullscreenPopGesture-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FDFullscreenPopGesture-prefix.pch"; sourceTree = "<group>"; };
-		31588DC5DFA690314B1061213C09E425 /* UINavigation-SXFixSpace.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UINavigation-SXFixSpace.xcconfig"; sourceTree = "<group>"; };
-		46092B5EAB34592D1C84D96744694230 /* FDFullscreenPopGesture.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FDFullscreenPopGesture.xcconfig; sourceTree = "<group>"; };
-		482FD27B1001E2D00437185E7266098C /* UINavigationSXFixSpace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UINavigationSXFixSpace.h; path = "UINavigation-SXFixSpace/UINavigationSXFixSpace.h"; sourceTree = "<group>"; };
-		517476BED017E5011135F7B332CF0A60 /* UINavigation-SXFixSpace-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigation-SXFixSpace-prefix.pch"; sourceTree = "<group>"; };
-		62EF8482CFC298D7323D5DE323181290 /* libUINavigation-SXFixSpace.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libUINavigation-SXFixSpace.a"; path = "libUINavigation-SXFixSpace.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27069C0FE5A5FBF8A17E63A53658AC3C /* FDFullscreenPopGesture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FDFullscreenPopGesture.debug.xcconfig; sourceTree = "<group>"; };
+		4108FFFE04B686B4BB57165397F28CC2 /* UINavigationSXFixSpace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UINavigationSXFixSpace.h; path = "UINavigation-SXFixSpace/UINavigationSXFixSpace.h"; sourceTree = "<group>"; };
+		4C445D66AB08D45267FB6FC3EA115E8F /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		62EF8482CFC298D7323D5DE323181290 /* UINavigation-SXFixSpace */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "UINavigation-SXFixSpace"; path = "libUINavigation-SXFixSpace.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EBA9B9F49F9E841D7D5302B66ADD1D /* Pods-BaseNavController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BaseNavController.release.xcconfig"; sourceTree = "<group>"; };
-		732B5EE2399F4FDF576EA820B15D386E /* libPods-BaseNavController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BaseNavController.a"; path = "libPods-BaseNavController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C983E9A92E19BDA638D8FBD25F9EF97 /* UINavigationSXFixSpace.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UINavigationSXFixSpace.m; path = "UINavigation-SXFixSpace/UINavigationSXFixSpace.m"; sourceTree = "<group>"; };
-		85D03BEC2CA9B2DB28398618379E7744 /* libFDFullscreenPopGesture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFDFullscreenPopGesture.a; path = libFDFullscreenPopGesture.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		90376493FFFD737C19A4FD09AC7DDFF7 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		6EB4F16C89C5D29C214297955BC96975 /* UINavigation-SXFixSpace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UINavigation-SXFixSpace.debug.xcconfig"; sourceTree = "<group>"; };
+		7320250C727ECE3D5ADD375C5C139BE0 /* FDFullscreenPopGesture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FDFullscreenPopGesture-dummy.m"; sourceTree = "<group>"; };
+		732B5EE2399F4FDF576EA820B15D386E /* Pods-BaseNavController */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-BaseNavController"; path = "libPods-BaseNavController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85D03BEC2CA9B2DB28398618379E7744 /* FDFullscreenPopGesture */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = FDFullscreenPopGesture; path = libFDFullscreenPopGesture.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8969F2E4951A4743525DDA6736B4BEDE /* UINavigation-SXFixSpace-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigation-SXFixSpace-prefix.pch"; sourceTree = "<group>"; };
+		95B71AF741FC115E923D1AE7975404F2 /* UINavigationSXFixSpace.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UINavigationSXFixSpace.m; path = "UINavigation-SXFixSpace/UINavigationSXFixSpace.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FA012A36AA55DEEDA5EA20725396FD9 /* FDFullscreenPopGesture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FDFullscreenPopGesture-dummy.m"; sourceTree = "<group>"; };
 		A305C2DCF2569B8070237B0B1CCEB293 /* Pods-BaseNavController-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BaseNavController-acknowledgements.plist"; sourceTree = "<group>"; };
+		BDA25D242692D1179B2639531D2E771E /* UINavigation-SXFixSpace-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigation-SXFixSpace-dummy.m"; sourceTree = "<group>"; };
 		C2DB0368AB582E29C0469DC20F6477F0 /* Pods-BaseNavController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BaseNavController-dummy.m"; sourceTree = "<group>"; };
-		EA5E3A75A0CFEECF8481F926C95362E7 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
-		EF8568F6097C0B2F472243964C50E99E /* UINavigation-SXFixSpace-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigation-SXFixSpace-dummy.m"; sourceTree = "<group>"; };
+		D835F7749E9227C7E31AA0C98D6B4E9F /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		E069E88EC1C387928E46D02F14570FFD /* FDFullscreenPopGesture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FDFullscreenPopGesture.release.xcconfig; sourceTree = "<group>"; };
+		F2CE67E9437E7BBD2855F21562CF514E /* FDFullscreenPopGesture-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FDFullscreenPopGesture-prefix.pch"; sourceTree = "<group>"; };
 		FC2D7C1C03088F13A53C58036E5AA704 /* Pods-BaseNavController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BaseNavController.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1ABB8094862DDC77F237A7055A4B12E0 /* Frameworks */ = {
+		0D26884619B2F9391A51CE18FC5A83F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34293BAE72F02CFBF74A363378B426F6 /* Frameworks */ = {
+		36FB9C3B15356575A8003225D8D854E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CAB6C06B2F6E250A671E275709D6C19A /* Frameworks */ = {
+		DCBBF12A08C6A9E02A9D806802E95C52 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,6 +82,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CD44939A2EA8CC616DBB8ED64C1DF2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85D03BEC2CA9B2DB28398618379E7744 /* FDFullscreenPopGesture */,
+				732B5EE2399F4FDF576EA820B15D386E /* Pods-BaseNavController */,
+				62EF8482CFC298D7323D5DE323181290 /* UINavigation-SXFixSpace */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2150CB6735E7A3488307AFDA91344492 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,44 +100,22 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2F6C0832568850B55F83F3B404888B0C /* FDFullscreenPopGesture */ = {
+		41BA44D180B2BB8494EAA079F7A29F42 /* FDFullscreenPopGesture */ = {
 			isa = PBXGroup;
 			children = (
-				EA5E3A75A0CFEECF8481F926C95362E7 /* UINavigationController+FDFullscreenPopGesture.h */,
-				90376493FFFD737C19A4FD09AC7DDFF7 /* UINavigationController+FDFullscreenPopGesture.m */,
-				E692A7251AF15E37659785EB0E2EC8D3 /* Support Files */,
+				D835F7749E9227C7E31AA0C98D6B4E9F /* UINavigationController+FDFullscreenPopGesture.h */,
+				4C445D66AB08D45267FB6FC3EA115E8F /* UINavigationController+FDFullscreenPopGesture.m */,
+				F747BD4828AD82F770FED001E04D33FB /* Support Files */,
 			);
 			name = FDFullscreenPopGesture;
 			path = FDFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
-		40D0EEA86AA36BB2FBB3D4718153199E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				31588DC5DFA690314B1061213C09E425 /* UINavigation-SXFixSpace.xcconfig */,
-				EF8568F6097C0B2F472243964C50E99E /* UINavigation-SXFixSpace-dummy.m */,
-				517476BED017E5011135F7B332CF0A60 /* UINavigation-SXFixSpace-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/UINavigation-SXFixSpace";
-			sourceTree = "<group>";
-		};
-		51CBF61C738668FF0F2D100F17EF26B2 /* UINavigation-SXFixSpace */ = {
-			isa = PBXGroup;
-			children = (
-				482FD27B1001E2D00437185E7266098C /* UINavigationSXFixSpace.h */,
-				7C983E9A92E19BDA638D8FBD25F9EF97 /* UINavigationSXFixSpace.m */,
-				40D0EEA86AA36BB2FBB3D4718153199E /* Support Files */,
-			);
-			name = "UINavigation-SXFixSpace";
-			path = "UINavigation-SXFixSpace";
-			sourceTree = "<group>";
-		};
 		B43606BF1039C9EB8169214BFD02A25B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2F6C0832568850B55F83F3B404888B0C /* FDFullscreenPopGesture */,
-				51CBF61C738668FF0F2D100F17EF26B2 /* UINavigation-SXFixSpace */,
+				41BA44D180B2BB8494EAA079F7A29F42 /* FDFullscreenPopGesture */,
+				D831527828A66F757C50EA884F1A2734 /* UINavigation-SXFixSpace */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -136,9 +126,32 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				B43606BF1039C9EB8169214BFD02A25B /* Pods */,
-				F8CCD46C874811EB0E805FBB4CCD1A75 /* Products */,
+				1CD44939A2EA8CC616DBB8ED64C1DF2A /* Products */,
 				2150CB6735E7A3488307AFDA91344492 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		CFFB7E43FE1DCEC7C67398E91F43AE77 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDA25D242692D1179B2639531D2E771E /* UINavigation-SXFixSpace-dummy.m */,
+				8969F2E4951A4743525DDA6736B4BEDE /* UINavigation-SXFixSpace-prefix.pch */,
+				6EB4F16C89C5D29C214297955BC96975 /* UINavigation-SXFixSpace.debug.xcconfig */,
+				1959971D46B17408CFC8813BD7864706 /* UINavigation-SXFixSpace.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UINavigation-SXFixSpace";
+			sourceTree = "<group>";
+		};
+		D831527828A66F757C50EA884F1A2734 /* UINavigation-SXFixSpace */ = {
+			isa = PBXGroup;
+			children = (
+				4108FFFE04B686B4BB57165397F28CC2 /* UINavigationSXFixSpace.h */,
+				95B71AF741FC115E923D1AE7975404F2 /* UINavigationSXFixSpace.m */,
+				CFFB7E43FE1DCEC7C67398E91F43AE77 /* Support Files */,
+			);
+			name = "UINavigation-SXFixSpace";
+			path = "UINavigation-SXFixSpace";
 			sourceTree = "<group>";
 		};
 		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
@@ -146,17 +159,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E692A7251AF15E37659785EB0E2EC8D3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				46092B5EAB34592D1C84D96744694230 /* FDFullscreenPopGesture.xcconfig */,
-				9FA012A36AA55DEEDA5EA20725396FD9 /* FDFullscreenPopGesture-dummy.m */,
-				25D3C38157C29704810157432B809AB8 /* FDFullscreenPopGesture-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FDFullscreenPopGesture";
 			sourceTree = "<group>";
 		};
 		F38352E5FFA7B891CF24F2AE48DEA4C8 /* Pods-BaseNavController */ = {
@@ -172,39 +174,41 @@
 			path = "Target Support Files/Pods-BaseNavController";
 			sourceTree = "<group>";
 		};
-		F8CCD46C874811EB0E805FBB4CCD1A75 /* Products */ = {
+		F747BD4828AD82F770FED001E04D33FB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				85D03BEC2CA9B2DB28398618379E7744 /* libFDFullscreenPopGesture.a */,
-				732B5EE2399F4FDF576EA820B15D386E /* libPods-BaseNavController.a */,
-				62EF8482CFC298D7323D5DE323181290 /* libUINavigation-SXFixSpace.a */,
+				7320250C727ECE3D5ADD375C5C139BE0 /* FDFullscreenPopGesture-dummy.m */,
+				F2CE67E9437E7BBD2855F21562CF514E /* FDFullscreenPopGesture-prefix.pch */,
+				27069C0FE5A5FBF8A17E63A53658AC3C /* FDFullscreenPopGesture.debug.xcconfig */,
+				E069E88EC1C387928E46D02F14570FFD /* FDFullscreenPopGesture.release.xcconfig */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/FDFullscreenPopGesture";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		04E6AB2BFC6F6A36FA832E5C2F224963 /* Headers */ = {
+		0C6C1D43A79708BF69C5B25303504DDF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68A84B33C46228A574DD01B9A8FFC464 /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
+				70597BEA6425C510CB7950A193D4D381 /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A7B278D52FF8B03478A1D2431F49DB1 /* Headers */ = {
+		426C0CEB71CD3127FAB49052CA214B5C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB69E32477041D418EFB67798631257 /* UINavigationSXFixSpace.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D556B9213C4AB6D223F811ACD1AA601 /* Headers */ = {
+		A4C12025BC9A5BA5AEFE7BE85DA9D554 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EB666A6992234BE80ADA5A8DDC7998E /* UINavigationSXFixSpace.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,30 +217,30 @@
 /* Begin PBXNativeTarget section */
 		01D3FFB626E5048312022EF83641EC4B /* Pods-BaseNavController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA60E33B09EBA771530D7437F2412C56 /* Build configuration list for PBXNativeTarget "Pods-BaseNavController" */;
+			buildConfigurationList = 6BD02AB7DD0D848EFD79F0B26A4909D9 /* Build configuration list for PBXNativeTarget "Pods-BaseNavController" */;
 			buildPhases = (
-				0A7B278D52FF8B03478A1D2431F49DB1 /* Headers */,
-				634C8FCB8860642911D7C19558E63BC7 /* Sources */,
-				1ABB8094862DDC77F237A7055A4B12E0 /* Frameworks */,
+				A4C12025BC9A5BA5AEFE7BE85DA9D554 /* Headers */,
+				65E5C36EF72C640A5C87A93398F59601 /* Sources */,
+				36FB9C3B15356575A8003225D8D854E0 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				92BAA80621461267C43A05126D82C476 /* PBXTargetDependency */,
-				B9DCBD415E13AC55484ED52488269972 /* PBXTargetDependency */,
+				EA56CC349A39AE6DE04073D02F1986DA /* PBXTargetDependency */,
+				56F27ED0C58B7C00692BF9440040C4F3 /* PBXTargetDependency */,
 			);
 			name = "Pods-BaseNavController";
 			productName = "Pods-BaseNavController";
-			productReference = 732B5EE2399F4FDF576EA820B15D386E /* libPods-BaseNavController.a */;
+			productReference = 732B5EE2399F4FDF576EA820B15D386E /* Pods-BaseNavController */;
 			productType = "com.apple.product-type.library.static";
 		};
 		8FE0EB310F454719A11FBFEAAC09FE3E /* FDFullscreenPopGesture */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 814D3C2DCED5681C17EB84CCB59BD799 /* Build configuration list for PBXNativeTarget "FDFullscreenPopGesture" */;
+			buildConfigurationList = 01B0FDE2DF0C997E80E9ED1A5D6EE1CA /* Build configuration list for PBXNativeTarget "FDFullscreenPopGesture" */;
 			buildPhases = (
-				04E6AB2BFC6F6A36FA832E5C2F224963 /* Headers */,
-				92BF4BEA94EB49206398B1C30AAA1ECD /* Sources */,
-				34293BAE72F02CFBF74A363378B426F6 /* Frameworks */,
+				0C6C1D43A79708BF69C5B25303504DDF /* Headers */,
+				DD5817D9DED172B51DE8F1B7E268F100 /* Sources */,
+				0D26884619B2F9391A51CE18FC5A83F8 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,16 +248,16 @@
 			);
 			name = FDFullscreenPopGesture;
 			productName = FDFullscreenPopGesture;
-			productReference = 85D03BEC2CA9B2DB28398618379E7744 /* libFDFullscreenPopGesture.a */;
+			productReference = 85D03BEC2CA9B2DB28398618379E7744 /* FDFullscreenPopGesture */;
 			productType = "com.apple.product-type.library.static";
 		};
 		AB6B52E0882E6D9B4CF162FE615A4D3C /* UINavigation-SXFixSpace */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBB141925E90849CA2B971CB014893EB /* Build configuration list for PBXNativeTarget "UINavigation-SXFixSpace" */;
+			buildConfigurationList = 0D9CE4FC99802BDA8B52F787FCE027E0 /* Build configuration list for PBXNativeTarget "UINavigation-SXFixSpace" */;
 			buildPhases = (
-				2D556B9213C4AB6D223F811ACD1AA601 /* Headers */,
-				C0A00433866AAEB1BF8E0F1239A0DE25 /* Sources */,
-				CAB6C06B2F6E250A671E275709D6C19A /* Frameworks */,
+				426C0CEB71CD3127FAB49052CA214B5C /* Headers */,
+				F7DF4E45B082AFAF2CDE87108A077A05 /* Sources */,
+				DCBBF12A08C6A9E02A9D806802E95C52 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,7 +265,7 @@
 			);
 			name = "UINavigation-SXFixSpace";
 			productName = "UINavigation-SXFixSpace";
-			productReference = 62EF8482CFC298D7323D5DE323181290 /* libUINavigation-SXFixSpace.a */;
+			productReference = 62EF8482CFC298D7323D5DE323181290 /* UINavigation-SXFixSpace */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -270,18 +274,19 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				Base,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = F8CCD46C874811EB0E805FBB4CCD1A75 /* Products */;
+			productRefGroup = 1CD44939A2EA8CC616DBB8ED64C1DF2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -293,77 +298,77 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		634C8FCB8860642911D7C19558E63BC7 /* Sources */ = {
+		65E5C36EF72C640A5C87A93398F59601 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B506293B97B0AA1FDB5D01A3CAC7282 /* Pods-BaseNavController-dummy.m in Sources */,
+				C22AB04C1320A1D29961D9F155545E6F /* Pods-BaseNavController-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92BF4BEA94EB49206398B1C30AAA1ECD /* Sources */ = {
+		DD5817D9DED172B51DE8F1B7E268F100 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40442014A2E1A5F48B54FF96592114C8 /* FDFullscreenPopGesture-dummy.m in Sources */,
-				E848C4108D4834AA905648BAE1E52A7A /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				19AE48B15B3D3F4E8E0FA9101B476B55 /* FDFullscreenPopGesture-dummy.m in Sources */,
+				49E9E7EC05C2FDF228B9CE2AA6059A23 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C0A00433866AAEB1BF8E0F1239A0DE25 /* Sources */ = {
+		F7DF4E45B082AFAF2CDE87108A077A05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C30B4B863111118FC059034DF5B432B /* UINavigation-SXFixSpace-dummy.m in Sources */,
-				239E9A2B028258D76D542453AA4EFCE1 /* UINavigationSXFixSpace.m in Sources */,
+				9D31C61B484DE2D35CE90D841FF63D82 /* UINavigation-SXFixSpace-dummy.m in Sources */,
+				99195F3F634F5E9C5BA925ED2E1C298A /* UINavigationSXFixSpace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		92BAA80621461267C43A05126D82C476 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FDFullscreenPopGesture;
-			target = 8FE0EB310F454719A11FBFEAAC09FE3E /* FDFullscreenPopGesture */;
-			targetProxy = 53FABE58876E7A2561DF97A24A871D49 /* PBXContainerItemProxy */;
-		};
-		B9DCBD415E13AC55484ED52488269972 /* PBXTargetDependency */ = {
+		56F27ED0C58B7C00692BF9440040C4F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "UINavigation-SXFixSpace";
 			target = AB6B52E0882E6D9B4CF162FE615A4D3C /* UINavigation-SXFixSpace */;
-			targetProxy = 65E7D539208785EED251CB0226D588C0 /* PBXContainerItemProxy */;
+			targetProxy = E6CDFFABEE8A8F474894EEB169FE15A3 /* PBXContainerItemProxy */;
+		};
+		EA56CC349A39AE6DE04073D02F1986DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FDFullscreenPopGesture;
+			target = 8FE0EB310F454719A11FBFEAAC09FE3E /* FDFullscreenPopGesture */;
+			targetProxy = AE2C3E16CD950D3FD900A09D21EF19E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		209987795088932E8DE73C1DA35E5557 /* Release */ = {
+		2213A92900725B910346F6F6CD4E1B1A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63EBA9B9F49F9E841D7D5302B66ADD1D /* Pods-BaseNavController.release.xcconfig */;
+			baseConfigurationReference = E069E88EC1C387928E46D02F14570FFD /* FDFullscreenPopGesture.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/FDFullscreenPopGesture/FDFullscreenPopGesture-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = FDFullscreenPopGesture;
+				PRODUCT_NAME = FDFullscreenPopGesture;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		4B73901EB9C3F7055B3C85841BEC6512 /* Debug */ = {
+		2F0B1C2C115DBACB928B3BA35F3EFFDD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46092B5EAB34592D1C84D96744694230 /* FDFullscreenPopGesture.xcconfig */;
+			baseConfigurationReference = 27069C0FE5A5FBF8A17E63A53658AC3C /* FDFullscreenPopGesture.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -382,10 +387,32 @@
 			};
 			name = Debug;
 		};
-		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+		4E4E8D951F1544B04C5FDAA64925E128 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63EBA9B9F49F9E841D7D5302B66ADD1D /* Pods-BaseNavController.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D42DC62C4F2E194221DF89C48496C98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -408,6 +435,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -442,10 +470,53 @@
 			};
 			name = Release;
 		};
-		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+		A9B7543B2920C1FE68C776DDD3878E75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC2D7C1C03088F13A53C58036E5AA704 /* Pods-BaseNavController.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D23E7AA62EE395A6BD134529BAE5E87D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EB4F16C89C5D29C214297955BC96975 /* UINavigation-SXFixSpace.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/UINavigation-SXFixSpace/UINavigation-SXFixSpace-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = UINavigation_SXFixSpace;
+				PRODUCT_NAME = "UINavigation-SXFixSpace";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4D0D44B090D4284607EBBC4E71A96C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -468,6 +539,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -506,11 +578,10 @@
 			};
 			name = Debug;
 		};
-		8F5CEEA1240E96C9967C589726B13A06 /* Debug */ = {
+		E4F956C01C8CCACBADAF290714D9E2F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31588DC5DFA690314B1061213C09E425 /* UINavigation-SXFixSpace.xcconfig */;
+			baseConfigurationReference = 1959971D46B17408CFC8813BD7864706 /* UINavigation-SXFixSpace.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -521,74 +592,6 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = UINavigation_SXFixSpace;
 				PRODUCT_NAME = "UINavigation-SXFixSpace";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9D6ACCBD9868AC0597D3F518E8BBD551 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC2D7C1C03088F13A53C58036E5AA704 /* Pods-BaseNavController.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B7B368DAAC0C86A474A509E6D7812F51 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31588DC5DFA690314B1061213C09E425 /* UINavigation-SXFixSpace.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/UINavigation-SXFixSpace/UINavigation-SXFixSpace-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = UINavigation_SXFixSpace;
-				PRODUCT_NAME = "UINavigation-SXFixSpace";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		BF3FFD8C58D4D47A29033B15571C7510 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46092B5EAB34592D1C84D96744694230 /* FDFullscreenPopGesture.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/FDFullscreenPopGesture/FDFullscreenPopGesture-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FDFullscreenPopGesture;
-				PRODUCT_NAME = FDFullscreenPopGesture;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -601,38 +604,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		01B0FDE2DF0C997E80E9ED1A5D6EE1CA /* Build configuration list for PBXNativeTarget "FDFullscreenPopGesture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F0B1C2C115DBACB928B3BA35F3EFFDD /* Debug */,
+				2213A92900725B910346F6F6CD4E1B1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D9CE4FC99802BDA8B52F787FCE027E0 /* Build configuration list for PBXNativeTarget "UINavigation-SXFixSpace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D23E7AA62EE395A6BD134529BAE5E87D /* Debug */,
+				E4F956C01C8CCACBADAF290714D9E2F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
-				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+				E4D0D44B090D4284607EBBC4E71A96C1 /* Debug */,
+				6D42DC62C4F2E194221DF89C48496C98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		814D3C2DCED5681C17EB84CCB59BD799 /* Build configuration list for PBXNativeTarget "FDFullscreenPopGesture" */ = {
+		6BD02AB7DD0D848EFD79F0B26A4909D9 /* Build configuration list for PBXNativeTarget "Pods-BaseNavController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4B73901EB9C3F7055B3C85841BEC6512 /* Debug */,
-				BF3FFD8C58D4D47A29033B15571C7510 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AA60E33B09EBA771530D7437F2412C56 /* Build configuration list for PBXNativeTarget "Pods-BaseNavController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9D6ACCBD9868AC0597D3F518E8BBD551 /* Debug */,
-				209987795088932E8DE73C1DA35E5557 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CBB141925E90849CA2B971CB014893EB /* Build configuration list for PBXNativeTarget "UINavigation-SXFixSpace" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8F5CEEA1240E96C9967C589726B13A06 /* Debug */,
-				B7B368DAAC0C86A474A509E6D7812F51 /* Release */,
+				A9B7543B2920C1FE68C776DDD3878E75 /* Debug */,
+				4E4E8D951F1544B04C5FDAA64925E128 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
