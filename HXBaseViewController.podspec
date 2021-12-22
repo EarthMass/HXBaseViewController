@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HXBaseViewController"
-  s.version      = "1.1.4"
+  s.version      = "1.1.5"
   s.summary      = "快速搭建界面的导航栏配置"
 
 
