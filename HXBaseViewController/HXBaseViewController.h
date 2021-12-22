@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UINavigationItem+margin.h"
 #import "HXBaseNavgationController.h"
 
 //视图背景颜色
@@ -81,7 +80,7 @@ typedef void(^GCusNavClickIndex)(NSInteger index);
 @property (nonatomic, strong) UIColor * statusBarBackgroundColor; ///<状态栏颜色
 @property (nonatomic, strong) UIColor * navBarColor; ///<导航栏颜色 配置
 
-@property (nonatomic, strong) NSDictionary<NSAttributedStringKey, id> * titleTextAttributes; ///<导航栏标题字体
+@property (nonatomic, strong) NSDictionary<NSAttributedStringKey, id> * navTitleTextAttributes; ///<导航栏标题字体
 
 /**
  *   YES 需要加这个 在当前控制器中 否则 导航栏底部显示的是window view起点从y = 64开始

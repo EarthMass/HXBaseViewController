@@ -29,13 +29,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    //自定导航栏
-    BaseNavVCDemo * navView =  [[BaseNavVCDemo alloc] init];
-    UINavigationController * viewC = [[UINavigationController alloc] initWithRootViewController:navView];
-    [self.window setRootViewController:viewC];
     
-//    self.nav = [self tabBarController];
-//    [self.window setRootViewController:self.nav];
+    BOOL isCusNav = YES;
+    
+    if (isCusNav) {
+        //    //自定导航栏
+        BaseNavVCDemo * navView =  [[BaseNavVCDemo alloc] init];
+        UINavigationController * viewC = [[UINavigationController alloc] initWithRootViewController:navView];
+        [self.window setRootViewController:viewC];
+        
+    } else {
+        self.nav = [self tabBarController];
+        [self.window setRootViewController:self.nav];
+    }
+
+    
+  
     
     [self.window makeKeyAndVisible];
     

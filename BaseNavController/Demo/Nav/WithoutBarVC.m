@@ -19,9 +19,17 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor lightGrayColor];
 
-    self.hiddenNavBar = NO;
+    self.hiddenNavBar = YES;
+    
+    
+    UIButton * btn1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 150, 100, 40)];
+    [btn1 setTitle:@"next" forState:UIControlStateNormal];
+    btn1.backgroundColor = [UIColor brownColor];
+    [btn1 addTarget:self action:@selector(btn1Action) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn1];
     
 }
+
 //- (void)viewWillAppear:(BOOL)animated {
 //    [super viewWillAppear:animated];
 //    [self.navigationController setNavigationBarHidden:YES animated:NO];
@@ -32,6 +40,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)btn1Action {
+    [self.navigationController pushViewController:[WithoutBarVC new] animated:YES];
+}
 /*
 #pragma mark - Navigation
 

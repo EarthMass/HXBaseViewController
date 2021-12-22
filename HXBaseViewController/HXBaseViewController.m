@@ -18,6 +18,8 @@
 #endif
 
 
+
+
 @interface HXBaseViewController ()
 
 @property (nonatomic, strong) UIButton * leftBtn;;
@@ -31,6 +33,7 @@
 @property (nonatomic, assign) CGFloat cusRightBtnW;
 @property (nonatomic, assign) CGFloat cusLeftBtnW;
 
+@property (nonatomic, strong) UINavigationBarAppearance * barApppearance API_AVAILABLE(ios(13.0));
 
 
 @end
@@ -41,9 +44,9 @@
 
     //导航栏按钮位置偏移的解决方案,兼容iOS7~iOS13,可自定义间距
 #if __has_include(<UINavigation-SXFixSpace/UINavigationSXFixSpace.h>)
-    [UINavigationConfig shared].sx_disableFixSpace = NO;//是否禁止使用修正,默认为NO
-    [UINavigationConfig shared].sx_defaultFixSpace = 10;//默认为0 可以修改 ios11+ 距离边缘的间距
-
+    
+        [UINavigationConfig shared].sx_disableFixSpace = NO;//是否禁止使用修正,默认为NO
+        [UINavigationConfig shared].sx_defaultFixSpace = 15;//默认为0 可以修改 ios11+ 距离边缘的间距
 #endif
 
 
@@ -104,40 +107,55 @@
     }
 #if __has_include("UINavigationController+FDFullscreenPopGesture.h")
     self.navigationController.fd_fullscreenPopGestureRecognizer.enabled = _canFullScreenGesBack;
+    if (_hiddenNavBar) {
+        self.fd_prefersNavigationBarHidden = YES;
+    }
 #endif
 
 
-    if (_hiddenNavBar != !self.navigationController.navigationBar.hidden) {
+//    if (_hiddenNavBar != !self.navigationController.navigationBar.hidden) {
         if (_hiddenNavBar) {
             [self.navigationController setNavigationBarHidden:_hiddenNavBar animated:NO];
+            //记录上个控制器的背景颜色
+          NSInteger index =  [self.navigationController.viewControllers indexOfObject:self];
+            if (index > 0) {
+                HXBaseViewController * vc = self.navigationController.viewControllers[index - 1];
+                self.navBarColor = vc.navBarColor;
+                self.navBgImage = vc.navBgImage;
+            }
         } else {
             [self.navigationController setNavigationBarHidden:_hiddenNavBar animated:NO];
         }
-    }
+//    }
 
     if (_hiddenLeftBtn) {
         self.navigationItem.leftBarButtonItem = nil;
         self.navigationItem.leftBarButtonItems = nil;
     }
 
+    if (_hiddenNavBar) {
+        [self.navigationController setNavigationBarHidden:YES animated:NO];
+    }
 
-
-
+    [self setHiddenShadow:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self updateNavigationBarAppearance];
+  
 }
 
 - (void)updateNavigationBarAppearance {
     NSLog(@"");
+    
+    
     UIColor * statuBarColor = [_statusBarBackgroundColor copy];
     self.statusBarBackgroundColor = statuBarColor;
     //导航栏 字体 字色 背景色
     [self.navBar
      setTitleTextAttributes:
-         self.titleTextAttributes];
+         self.navTitleTextAttributes];
     //导航背景颜色
     UIColor * navBarColor = [_navBarColor copy];
     self.navBarColor = navBarColor;
@@ -179,7 +197,7 @@
     self.statusBarBackgroundColor = GNavBgColor;
 
     //导航栏 字体 字色 背景色
-    self.titleTextAttributes = @{
+    self.navTitleTextAttributes = @{
         NSForegroundColorAttributeName:GNavTextColor,
         NSFontAttributeName:GNavTextFont,
     };
@@ -210,8 +228,10 @@
 
     [self.leftBtn setImage:[NSString getImageOfImageName:GNavBackImageName type:BaseNavController] forState:UIControlStateNormal];
     [self.leftBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
 
     [self.leftBtn sizeToFit];
+    self.leftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
 
     self.cusLeftBtnW = self.leftBtn.bounds.size.width;
 
@@ -323,12 +343,11 @@
     {
      
         if (@available(iOS 15.0, *)) {
-            UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
 
-            [appearance configureWithOpaqueBackground];
+            [self.barApppearance configureWithOpaqueBackground];
 
-            appearance.backgroundColor = navColor;
-            self.navBar.standardAppearance = appearance;
+            self.barApppearance.backgroundColor = navColor;
+            self.navBar.standardAppearance = self.barApppearance;
             self.navBar.scrollEdgeAppearance = self.navBar.standardAppearance;
         }
         [self.navBar setBarTintColor:navColor];
@@ -345,45 +364,68 @@
         self.edgesForExtendedLayout = UIRectEdgeTop;
 
         if (@available(iOS 15.0, *)) {
-            UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
-
-            [appearance configureWithOpaqueBackground];
-            appearance.shadowColor = [UIColor clearColor];
-            self.navBar.standardAppearance = appearance;
+            [self.barApppearance configureWithTransparentBackground];
+            self.barApppearance.shadowColor = [UIColor clearColor];
+            
+            self.barApppearance.backgroundImage = [self.class imageWithColor:[UIColor clearColor] size:CGSizeMake(10, 10)];
+            
+            self.navBar.standardAppearance = self.barApppearance;
             self.navBar.scrollEdgeAppearance = self.navBar.standardAppearance;
-        }
         
-        //设置导航栏背景图片为一个空的image，这样就透明了
-        [self.navBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+            [self.navBar setShadowImage:[[UIImage new] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+            [self.navBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+            
+        } else {
+            //设置导航栏背景图片为一个空的image，这样就透明了
+            [self.navBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
 
-        //去掉透明后导航栏下边的黑边
-        [self.navBar setShadowImage:[[UIImage alloc] init]];
-        //        navBar.layer.masksToBounds = YES;// 去掉横线（没有这一行代码导航栏的最下面还会有一个横线）
-
+            //去掉透明后导航栏下边的黑边
+            [self.navBar setShadowImage:[self.class imageWithColor:[UIColor clearColor] size:CGSizeMake(10, 10)]];
+            //        navBar.layer.masksToBounds = YES;// 去掉横线（没有这一行代码导航栏的最下面还会有一个横线）
+        }
       
     }
     else {
+        
         self.edgesForExtendedLayout = UIRectEdgeNone;
+        if (@available(iOS 15.0, *)) {
+            
+            [self.barApppearance configureWithOpaqueBackground];
+            self.barApppearance.shadowColor = [UIColor clearColor];
+            self.barApppearance.backgroundImage = nil;
+            self.barApppearance.backgroundColor = _navBarColor;
+            self.navBar.standardAppearance = self.barApppearance;
+            self.navBar.scrollEdgeAppearance = self.navBar.standardAppearance;
+
+            [self.navBar setShadowImage:[[UIImage new] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+            [self.navBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+        }
         //    如果不想让其他页面的导航栏变为透明 需要重置
         [self.navBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-        [self.navBar setShadowImage:nil];
+        [self.navBar setShadowImage:[self.class imageWithColor:[UIColor clearColor] size:CGSizeMake(10, 10)]];
+        
+     
 
     }
 
 
 }
 
-- (void)setTitleTextAttributes:(NSDictionary<NSAttributedStringKey,id> *)titleTextAttributes {
+- (void)setNavTitleTextAttributes:(NSDictionary<NSAttributedStringKey,id> *)titleTextAttributes {
     
     if (@available(iOS 15.0, *)) {
-        UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
-        [appearance configureWithOpaqueBackground];
-        [appearance setTitleTextAttributes:titleTextAttributes];
-        self.navBar.standardAppearance = appearance;
+  
+        [self.barApppearance configureWithOpaqueBackground];
+        [self.barApppearance setTitleTextAttributes:titleTextAttributes];
+        self.navBar.standardAppearance = self.barApppearance;
         self.navBar.scrollEdgeAppearance = self.navBar.standardAppearance;
+        
+
     }
-    [self.navBar
-     setTitleTextAttributes:titleTextAttributes];
+    else {
+        [self.navBar
+         setTitleTextAttributes:titleTextAttributes];
+    }
     
     
 }
@@ -438,6 +480,33 @@
 - (void)setHiddenNavBar:(BOOL)hiddenNavBar {
     _hiddenNavBar = hiddenNavBar;
 }
+//去掉透明后导航栏下边的黑边
+- (void)setHiddenShadow:(BOOL)hiddenShadow {
+    
+    
+    if (@available(iOS 15.0, *)) {
+        [self.barApppearance configureWithTransparentBackground];
+        self.barApppearance.shadowColor = [UIColor clearColor];
+        self.barApppearance.backgroundColor = _navBarColor;
+        if (hiddenShadow) {
+            [self.navBar setShadowImage:[[UIImage new] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+            [self.navBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+            self.barApppearance.backgroundImage = [self.class imageWithColor:[UIColor clearColor] size:CGSizeMake(10, 10)];
+        }
+        self.navBar.standardAppearance = self.barApppearance;
+        self.navBar.scrollEdgeAppearance = self.navBar.standardAppearance;
+    
+        
+        
+    } else {
+        //设置导航栏背景图片为一个空的image，这样就透明了
+        if (hiddenShadow) {
+            [self.navBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+            
+            [self.navBar setShadowImage:[self.class imageWithColor:[UIColor clearColor] size:CGSizeMake(10, 10)]];
+        }
+    }
+}
 
 #pragma mark- 文字标题
 
@@ -480,8 +549,10 @@
     [self.leftBtn setTitleColor:GNavBtnTitleColorNormal forState:UIControlStateNormal];
     [self.leftBtn setTitleColor:GNavBtnTitleColorSelect forState:UIControlStateHighlighted];
     self.leftBtn.titleLabel.font = GNavBtnTitleFont;
+    
 
     [self.leftBtn sizeToFit];
+    self.leftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
 
     self.cusLeftBtnW = self.leftBtn.bounds.size.width;
 
@@ -493,12 +564,21 @@
 - (void)setBackImage:(UIImage *)backImage {
     [self.leftBtn setImageEdgeInsets:UIEdgeInsetsZero];
     [self.leftBtn setImage:backImage forState:UIControlStateNormal];
+
 }
 
 - (void)setNavBgImage:(UIImage *)bgImage {
     _navBgImage = bgImage;
     if (_navBgImage) {
-        [self.navigationController.navigationBar setBackgroundImage:bgImage forBarMetrics:UIBarMetricsDefault];
+        if (@available(iOS 15.0, *)) {
+            [self.barApppearance configureWithOpaqueBackground];
+            [self.barApppearance setBackgroundImage:bgImage];
+            self.navBar.standardAppearance = self.barApppearance;
+            self.navBar.scrollEdgeAppearance = self.navBar.standardAppearance;
+        } else {
+            [self.navigationController.navigationBar setBackgroundImage:bgImage forBarMetrics:UIBarMetricsDefault];
+        }
+        
     }
 
 }
@@ -506,7 +586,16 @@
 - (void)setNavShadowImage:(UIImage *)navShadowImage {
     _navShadowImage = navShadowImage;
     if (_navShadowImage) {
-        [self.navigationController.navigationBar setShadowImage:_navShadowImage];
+        if (@available(iOS 15.0, *)) {
+            [self.barApppearance configureWithOpaqueBackground];
+            [self.barApppearance setBackgroundColor:_navBarColor];
+            [self.barApppearance setShadowImage:_navShadowImage];
+            self.navBar.standardAppearance = self.barApppearance;
+            self.navBar.scrollEdgeAppearance = self.navBar.standardAppearance;
+        } else {
+            [self.navigationController.navigationBar setShadowImage:_navShadowImage];
+        }
+        
     }
 }
 
@@ -712,7 +801,18 @@
     return image;
 }
 
-
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    UIGraphicsBeginImageContext(size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage * colorImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return  colorImage;
+    
+}
 
 - (void)pushRootNav:(UIViewController *)viewController animated:(BOOL)animated {
 
@@ -733,5 +833,12 @@
  // Pass the selected object to the new view controller.
  }
  */
+#pragma mark- Getting
+- (UINavigationBarAppearance *)barApppearance {
+    if (!_barApppearance) {
+        _barApppearance = [[UINavigationBarAppearance alloc] init];
+    }
+    return _barApppearance;
+}
 
 @end

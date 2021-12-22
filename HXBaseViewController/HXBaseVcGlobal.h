@@ -11,4 +11,3 @@
 #import "HXBaseNavgationController.h"
 #import "HXBaseViewController.h"
 #import "NSString+GetImageFromBundle.h"
-#import "UINavigationItem+margin.h"

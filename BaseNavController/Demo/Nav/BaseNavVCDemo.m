@@ -36,7 +36,8 @@
                  ];
     
     CGRect tableVFrame = self.view.frame;
-//    tableVFrame.size.height = tableVFrame.size.height;
+    tableVFrame.origin.y = 0;
+    tableVFrame.size.height = tableVFrame.size.height;
     
     tableV = [[UITableView alloc] initWithFrame:tableVFrame style:UITableViewStylePlain];
     tableV.delegate = self;
@@ -44,17 +45,15 @@
     [self setExtraCellLineHidden:tableV];
     [self.view addSubview:tableV];
     
-    tableV.backgroundColor = [UIColor whiteColor];
+    tableV.backgroundColor = [UIColor clearColor];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
 }
 
 #pragma mark- init
 - (void)initNav {
     
-    
-    
+    self.navBarTranslucent = NO;
     self.title = @"导航栏";
     self.rightStr = @"右阿牛你";
     self.hiddenLeftBtn = YES;
@@ -62,7 +61,11 @@
     self.statusBarTextIsWhite = YES;
     
     self.navBarColor = [UIColor redColor];
-    self.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor yellowColor]};
+    self.navTitleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+//    self.navBgImage = [UIImage imageNamed:@"bgNavImage.jpg"];
+
+//    self.navShadowImage =  [UIImage imageNamed:@"bgNavImage.jpg"];
+
 }
 
 - (void)didReceiveMemoryWarning {

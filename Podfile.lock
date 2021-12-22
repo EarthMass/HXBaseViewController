@@ -3,8 +3,8 @@ PODS:
   - UINavigation-SXFixSpace (1.2.4)
 
 DEPENDENCIES:
-  - FDFullscreenPopGesture (~> 1.1)
-  - UINavigation-SXFixSpace (~> 1.2.4)
+  - FDFullscreenPopGesture
+  - UINavigation-SXFixSpace
 
 SPEC REPOS:
   trunk:
@@ -15,6 +15,6 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   UINavigation-SXFixSpace: 10f223253ebff2ceefa26694e23b7694269763c4
 
-PODFILE CHECKSUM: f6537641f5e4a0c165ef97ab63142f42482cc787
+PODFILE CHECKSUM: 8cb458f799c7e773929be9395de7ad5d2367fde1
 
 COCOAPODS: 1.11.2

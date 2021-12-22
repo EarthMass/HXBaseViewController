@@ -28,10 +28,8 @@
 
     self.canFullScreenGesBack = YES;
 //    self.canGesBack = NO;
-    self.navBarColor = [UIColor redColor];
-
+    self.navBarColor = [UIColor redColor];//[UIColor brownColor];
     
-
 
     self.statusBarTextIsWhite = YES;
     

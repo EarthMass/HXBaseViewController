@@ -14,7 +14,6 @@
 		13756CCA1F94A69400BE46C3 /* HXBaseNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CA91F949A6A00BE46C3 /* HXBaseNavgationController.m */; };
 		13756CCB1F94A69400BE46C3 /* HXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CAC1F949A6A00BE46C3 /* HXBaseViewController.m */; };
 		13756CCD1F94A69400BE46C3 /* NSString+GetImageFromBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CB01F949A6A00BE46C3 /* NSString+GetImageFromBundle.m */; };
-		13756CCE1F94A69400BE46C3 /* UINavigationItem+margin.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CB21F949A6A00BE46C3 /* UINavigationItem+margin.m */; };
 		13756CCF1F94A69400BE46C3 /* BaseNavVCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CBB1F949C4500BE46C3 /* BaseNavVCDemo.m */; };
 		13756CD11F94A69400BE46C3 /* TwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CBF1F949C4500BE46C3 /* TwoVC.m */; };
 		13756CD31F94A69400BE46C3 /* WithoutBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13756CC31F949C4500BE46C3 /* WithoutBarVC.m */; };
@@ -74,8 +73,6 @@
 		13756CAC1F949A6A00BE46C3 /* HXBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXBaseViewController.m; sourceTree = "<group>"; };
 		13756CAF1F949A6A00BE46C3 /* NSString+GetImageFromBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GetImageFromBundle.h"; sourceTree = "<group>"; };
 		13756CB01F949A6A00BE46C3 /* NSString+GetImageFromBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GetImageFromBundle.m"; sourceTree = "<group>"; };
-		13756CB11F949A6A00BE46C3 /* UINavigationItem+margin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+margin.h"; sourceTree = "<group>"; };
-		13756CB21F949A6A00BE46C3 /* UINavigationItem+margin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+margin.m"; sourceTree = "<group>"; };
 		13756CBA1F949C4500BE46C3 /* BaseNavVCDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavVCDemo.h; sourceTree = "<group>"; };
 		13756CBB1F949C4500BE46C3 /* BaseNavVCDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavVCDemo.m; sourceTree = "<group>"; };
 		13756CBE1F949C4500BE46C3 /* TwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoVC.h; sourceTree = "<group>"; };
@@ -171,8 +168,6 @@
 				13756CAC1F949A6A00BE46C3 /* HXBaseViewController.m */,
 				13756CAF1F949A6A00BE46C3 /* NSString+GetImageFromBundle.h */,
 				13756CB01F949A6A00BE46C3 /* NSString+GetImageFromBundle.m */,
-				13756CB11F949A6A00BE46C3 /* UINavigationItem+margin.h */,
-				13756CB21F949A6A00BE46C3 /* UINavigationItem+margin.m */,
 			);
 			path = HXBaseViewController;
 			sourceTree = SOURCE_ROOT;
@@ -439,7 +434,6 @@
 				13756CCB1F94A69400BE46C3 /* HXBaseViewController.m in Sources */,
 				13756CE01F94A72600BE46C3 /* UIButton+InBlock.m in Sources */,
 				13756CCD1F94A69400BE46C3 /* NSString+GetImageFromBundle.m in Sources */,
-				13756CCE1F94A69400BE46C3 /* UINavigationItem+margin.m in Sources */,
 				13756CCF1F94A69400BE46C3 /* BaseNavVCDemo.m in Sources */,
 				13756CD11F94A69400BE46C3 /* TwoVC.m in Sources */,
 				13756CD31F94A69400BE46C3 /* WithoutBarVC.m in Sources */,
